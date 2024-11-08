@@ -16,6 +16,14 @@ body {
   background-size: 1em;
 }
 
+.bd-heading h3 {
+  font-size: 1.5rem;
+}
+
+h2.sticky-xl-top {
+  font-size: 1.5rem;
+}
+
 /* stylelint-disable-next-line selector-max-universal */
 .bd-heading + div > * + * {
   margin-top: 3rem;

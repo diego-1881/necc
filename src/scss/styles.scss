@@ -44,3 +44,12 @@
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
+
+// Necc components
+// Configuration
+@import "variables";
+
+// Layout & components
+@import "type";
+@import "buttons";
+@import "icons";

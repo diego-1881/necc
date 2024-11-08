@@ -1,20 +1,73 @@
-h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  line-height: $line-height-base;
+@mixin font-face($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url($src) format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include font-face("Sabon LT Std", "../fonts/SabonLTStd-Roman.woff2");
+@include font-face("Sabon LT Std", "../fonts/SabonLTStd-Bold.woff2", bold);
+
+@include font-face("Whitney", "../fonts/Whitney-Book.woff2");
+@include font-face("Whitney", "../fonts/Whitney-Bold.woff2", bold);
+@include font-face("Whitney", "../fonts/Whitney-Medium.woff2", 500);
+@include font-face("Whitney", "../fonts/Whitney-Semibold.woff2", 600);
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base * 1.2;
+  font-weight: normal;
+  line-height: $line-height-base * 0.9;
+}
+
+@mixin heading-style($font-size-multiplier, $line-height-multiplier: 1) {
+  font-family: $font-family-serif;
+  font-size: $font-size-base * $font-size-multiplier;
+  font-weight: normal;
+  line-height: $line-height-base * $line-height-multiplier;
 }
 
 h2 {
+  @include heading-style(5);
 }
 
 h3 {
+  @include heading-style(4.45, 0.7);
 }
 
 h4 {
+  @include heading-style(2.5, 0.8);
 }
 
 h5 {
+  @include heading-style(2, 0.8);
 }
 
 h6 {
+  @include heading-style(1.6, 0.8);
+}
+
+p {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base * 1.2;
+  font-weight: normal;
+  line-height: $line-height-base * 0.9;
+
+  &.lead {
+    font-size: $font-size-base * 1.43;
+  }
+
+  & small {
+    font-size: $font-size-base * 1.1;
+  }
+}
+
+.display-3 {
+  font-family: "Whitney", sans-serif;
+  font-size: $font-size-base * 1.63;
+  font-weight: normal;
+  line-height: $line-height-base * 0.9;
 }
