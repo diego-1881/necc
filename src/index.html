@@ -7,6 +7,90 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" aria-label="Fifth navbar example">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#">
+          <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="270" height="80" class="d-inline-block align-text-top" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Who We Are</a>
+
+              <ul class="dropdown-menu show">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!-- .nav-item -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!-- .nav-item -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">NECC Southborough</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!-- .nav-item -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Consulting & PSS</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!-- .nav-item -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Careers</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!-- .nav-item -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Donate</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <!-- .nav-item -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container py-4">
       <h1>Hello, Bootstrap and Vite!</h1>
       <button class="btn btn-primary">Primary Button</button>
@@ -14,6 +98,54 @@
       <button class="btn btn-secondary">Primary Button</button>
 
       <p class="text-dark">hola soy text-dark</p>
+    </div>
+
+    <div class="bg-dark">
+      <div class="container">
+        <footer class="row py-5 my-5">
+          <div class="col-12 col-sm-5 col-xl-6 mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+              <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="270" height="80" class="d-inline-block align-text-top" />
+            </a>
+            <small class="text-light">&copy; 2024 The New England Center for Children</small>
+          </div>
+
+          <div class="col-12 col-md-2 mb-3 ms-auto">
+            <p class="lead fw-semibold text-light mb-4">Information</p>
+
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light"> <small>Contact Us</small></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light"><small>Privacy Policy</small></a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-light"><small>Legal</small></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-3 col-xl-2 mb-3">
+            <p class="lead fw-semibold text-light mb-4">Socials</p>
+
+            <ul class="nav">
+              <li class="nav-item d-flex align-items-center pe-3 me-1">
+                <a href="#" class="nav-link p-0 text-light"><span class="necc-social-icon necc-social-icon-facebook d-block"></span></a>
+              </li>
+              <li class="nav-item d-flex align-items-center pe-3 me-1">
+                <a href="#" class="nav-link p-0 text-light"><span class="necc-social-icon necc-social-icon-linkedin d-block"></span></a>
+              </li>
+              <li class="nav-item d-flex align-items-center pe-3 me-1">
+                <a href="#" class="nav-link p-0 text-light"><span class="necc-social-icon necc-social-icon-instagram d-block"></span></a>
+              </li>
+              <li class="nav-item d-flex align-items-center pe-3 me-1">
+                <a href="#" class="nav-link p-0 text-light"><span class="necc-social-icon necc-social-icon-youtube d-block"></span></a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <script type="module" src="./js/main.js"></script>
