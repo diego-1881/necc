@@ -1,0 +1,39 @@
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #96a0a3;
+$gray-800: #1a2d37;
+$black: #000;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue: #0769d2;
+$cyan: #70badd;
+
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue": $blue,
+  "cyan": $cyan,
+  "black": $black,
+  "white": $white,
+);
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary: $blue;
+$secondary: $cyan;
+$light: $gray-100;
+$dark: $gray-800;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+  "dark": $dark,
+);
+// scss-docs-end theme-colors-map

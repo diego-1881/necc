@@ -6,18 +6,19 @@
     <title>Bootstrap with Vite</title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary" aria-label="Fifth navbar example">
-      <div class="container-fluid px-5">
+  <body class="pt-5">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-secondary py-2" aria-label="Fifth navbar example">
+      <div class="container-fluid px-5 py-1">
         <a class="navbar-brand" href="#">
-          <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="270" height="80" class="d-inline-block align-text-top" />
+          <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="242" height="70.78" class="d-inline-block align-text-top" />
         </a>
+
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarToggler"
-          aria-controls="navbarToggler"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -25,65 +26,81 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Who We Are</a>
+          <ul class="navbar-nav navbar-dark ms-auto mb-2 mb-lg-0 dropdown-hover-all">
+            <li class="nav-item dropdown px-1 px-xl-2">
+              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Who We Are</a>
 
-              <ul class="dropdown-menu show">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <ul class="dropdown-menu bg-secondary py-4 px-3">
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Our Story</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Our Leadership</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Diversity, Equity & Inclusion</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Our Impact</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Understanding Autism & ABA</a></li>
               </ul>
             </li>
             <!-- .nav-item -->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="nav-item dropdown px-1 px-xl-2">
+              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
+
+              <ul class="dropdown-menu bg-secondary py-4 px-3">
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">NECC Southborough</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Consulting & PSS</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Global Consulting</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">ACE® ABA Software System</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Research</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Professional Development</a></li>
               </ul>
             </li>
             <!-- .nav-item -->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">NECC Southborough</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="nav-item dropdown px-1 px-xl-2">
+              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">NECC Southborough</a>
+
+              <ul class="dropdown-menu bg-secondary py-4 px-3">
+                <li class="dropend">
+                  <a
+                    class="dropdown-item bg-secondary text-white fs-5 pb-2"
+                    href="#"
+                    id="dropdown-layouts"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Education Overview</a
+                  >
+                  <div class="dropdown-menu" aria-labelledby="dropdown-layouts">
+                    <a class="dropdown-item" href="#">Fullscreen</a>
+                    <a class="dropdown-item" href="#">Empty</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Magic</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Leadership</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Community</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Media</a></li>
               </ul>
             </li>
             <!-- .nav-item -->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Consulting & PSS</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li class="nav-item dropdown px-1 px-xl-2">
+              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Consulting & PSS</a>
+
+              <ul class="dropdown-menu bg-secondary py-4 px-3">
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Leadership</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Contact Us</a></li>
+                <li><a class="dropdown-item bg-secondary text-white fs-5 pb-2" href="#">Services</a></li>
               </ul>
             </li>
             <!-- .nav-item -->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Careers</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item dropdown px-1 px-xl-2">
+              <a class="nav-link text-white" href="#">Careers</a>
             </li>
             <!-- .nav-item -->
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Donate</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item dropdown px-1 px-xl-2">
+              <a class="nav-link text-white" href="#">Donate</a>
             </li>
             <!-- .nav-item -->
           </ul>
@@ -91,43 +108,42 @@
       </div>
     </nav>
 
-    <div class="container py-4">
+    <div class="container py-4 pt-5 mt-5">
       <h1>Hello, Bootstrap and Vite!</h1>
       <button class="btn btn-primary">Primary Button</button>
       <button class="btn btn-outline-primary text-gray-dark">Primary Button</button>
       <button class="btn btn-secondary">Primary Button</button>
-
-      <p class="text-dark">hola soy text-dark</p>
     </div>
 
-    <div class="bg-dark">
-      <div class="container">
-        <footer class="row py-5 my-5">
-          <div class="col-12 col-sm-5 col-xl-6 mb-3">
+    <footer class="bg-dark mt-5">
+      <div class="container py-4 pb-3">
+        <div class="row py-5">
+          <div class="col-12 col-sm-12 col-lg-5 col-xl-6 mb-5 mb-lg-0">
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-              <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="270" height="80" class="d-inline-block align-text-top" />
+              <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="220" height="64.34" class="d-inline-block align-text-top" />
             </a>
-            <small class="text-light">&copy; 2024 The New England Center for Children</small>
+
+            <small class="text-white text-opacity-75">&copy; 2024 The New England Center for Children</small>
           </div>
 
-          <div class="col-12 col-md-2 mb-3 ms-auto">
-            <p class="lead fw-semibold text-light mb-4">Information</p>
+          <div class="col-12 col-sm-6 col-lg-2 mb-3 ms-lg-auto mb-5 mb-sm-0">
+            <p class="lead fw-semibold text-white text-opacity-75 mb-4">Information</p>
 
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-light"> <small>Contact Us</small></a>
+                <a href="#" class="nav-link p-0 text-white"> <small>Contact Us</small></a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-light"><small>Privacy Policy</small></a>
+                <a href="#" class="nav-link p-0 text-white"><small>Privacy Policy</small></a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-light"><small>Legal</small></a>
+                <a href="#" class="nav-link p-0 text-white"><small>Legal</small></a>
               </li>
             </ul>
           </div>
 
-          <div class="col-12 col-md-3 col-xl-2 mb-3">
-            <p class="lead fw-semibold text-light mb-4">Socials</p>
+          <div class="col-12 col-sm-6 col-lg-3 col-xl-2 mb-3">
+            <p class="lead fw-semibold text-white text-opacity-75 mb-4">Socials</p>
 
             <ul class="nav">
               <li class="nav-item d-flex align-items-center pe-3 me-1">
@@ -144,9 +160,9 @@
               </li>
             </ul>
           </div>
-        </footer>
+        </div>
       </div>
-    </div>
+    </footer>
 
     <script type="module" src="./js/main.js"></script>
   </body>
