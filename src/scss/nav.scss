@@ -1,0 +1,15 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s, `<ul>`s or `<ol>`s.
+
+.nav-link {
+  font-size: $nav-link-font-size;
+  color: $nav-link-color;
+}
+
+@include media-breakpoint-down(sm) {
+  .nav-link {
+    border-bottom: $border-width solid $nav-border-color;
+  }
+}

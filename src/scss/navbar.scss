@@ -1,3 +1,28 @@
+// Responsive navbar
+//
+// Custom styles for responsive collapsing and toggling of navbar contents.
+// Powered by the collapse Bootstrap JavaScript plugin.
+
+// When collapsed, prevent the toggleable navbar contents from appearing in
+// the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
+// on the `.navbar` parent.
+.navbar-collapse {
+  .dropdown-toggle {
+    &::after {
+      @include icon-caret-down();
+      display: inline-flex;
+      border: 0;
+      width: $spacer / 1.3;
+      height: $spacer / 1.3;
+      vertical-align: middle;
+    }
+
+    &.show::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 // scss-docs-start navbar-expand-loop
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.

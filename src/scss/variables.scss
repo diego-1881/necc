@@ -46,3 +46,11 @@ $btn-line-height: $input-btn-line-height;
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: var(--#{$prefix}border-radius-pill);
 // scss-docs-end btn-variables
+
+// Navs
+
+// scss-docs-start nav-variables
+$nav-link-font-size: $font-size-base * 1.12;
+$nav-link-color: $white;
+$nav-border-color: rgba($white, 0.175);
+// scss-docs-end nav-variables
