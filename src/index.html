@@ -133,12 +133,30 @@
       </div>
     </nav>
 
-    <div class="container py-4 pt-5 mt-5">
-      <h1>Hello, Bootstrap and Vite!</h1>
-      <button class="btn btn-primary">Primary Button</button>
-      <button class="btn btn-outline-primary text-gray-dark">Primary Button</button>
-      <button class="btn btn-secondary">Primary Button</button>
+    <div class="position-relative overflow-hidden">
+      <video class="w-100 d-block" muted loop poster="./img/video-poster.jpg" preload="metadata">
+        <source src="./video/home.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="position-absolute bg-black bg-opacity-25 w-100 h-100 top-0 start-0"></div>
+
+      <h1 class="h4 text-white position-absolute bottom-0 start-0 pb-5 ps-5 mb-0">
+        <span class="fw-semibold">50 Years</span><br />
+        Helping Children<br />
+        with Autism
+      </h1>
     </div>
+
+    <main class="container py-5">
+      <section class="row mb-5">
+        <div class="col-12 col">
+          <h3>
+            NECC is a global leader in autism education and research. Through our schools, clinics, and consulting programs; our ACE ABA Software System (ACE®);
+            and our research and training, we are cultivating a more inclusive future for everyone.
+          </h3>
+        </div>
+      </section>
+    </main>
 
     <footer class="bg-dark mt-5">
       <div class="container py-4 pb-3">
