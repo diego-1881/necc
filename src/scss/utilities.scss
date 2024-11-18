@@ -1,0 +1,264 @@
+// Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(
+  $utilities,
+  (
+    // Margin utilities
+    // scss-docs-start utils-spacing
+    "margin":
+      (
+        responsive: true,
+        property: margin,
+        class: m,
+        values:
+          map-merge(
+            $spacers,
+            (
+              auto: auto,
+            )
+          ),
+      ),
+    "margin-x": (
+      responsive: true,
+      property: margin-right margin-left,
+      class: mx,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-y": (
+      responsive: true,
+      property: margin-top margin-bottom,
+      class: my,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-top": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-end": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-bottom": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    "margin-start": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values:
+        map-merge(
+          $spacers,
+          (
+            auto: auto,
+          )
+        ),
+    ),
+    // scss-docs-end utils-object-fit
+    // Opacity utilities
+    // scss-docs-start utils-opacity
+    "opacity":
+      (
+        property: opacity,
+        values: (
+          0: 0,
+          5: 0.05,
+          10: 0.1,
+          15: 0.15,
+          20: 0.2,
+          25: 0.25,
+          30: 0.3,
+          35: 0.35,
+          40: 0.4,
+          45: 0.45,
+          50: 0.5,
+          55: 0.55,
+          60: 0.6,
+          65: 0.65,
+          70: 0.7,
+          75: 0.75,
+          80: 0.8,
+          85: 0.85,
+          90: 0.9,
+          95: 0.95,
+          100: 1,
+        ),
+      ),
+    // scss-docs-end utils-opacity
+    // scss-docs-start utils-shadow
+    "shadow":
+      (
+        property: box-shadow,
+        class: shadow,
+        values: (
+          null: var(--#{$prefix}box-shadow),
+          sm: var(--#{$prefix}box-shadow-sm),
+          lg: var(--#{$prefix}box-shadow-lg),
+          none: none,
+        ),
+      ),
+    // scss-docs-end utils-shadow
+    // Text
+    // scss-docs-start utils-text
+    "font-weight":
+      (
+        property: font-weight,
+        class: fw,
+        values: (
+          lighter: $font-weight-lighter,
+          light: $font-weight-light,
+          normal: $font-weight-normal,
+          medium: $font-weight-medium,
+          semibold: $font-weight-semibold,
+          bold: $font-weight-bold,
+          bolder: $font-weight-bolder,
+        ),
+      ),
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        1: 1,
+        xs: $line-height-xs,
+        sm: $line-height-sm,
+        base: $line-height-base,
+        lg: $line-height-lg,
+      ),
+    ),
+    // scss-docs-end utils-text
+    // scss-docs-start utils-color
+    "color":
+      (
+        property: color,
+        class: text,
+        local-vars: (
+          "text-opacity": 1,
+        ),
+        values:
+          map-merge(
+            $utilities-text-colors,
+            (
+              "muted": var(--#{$prefix}secondary-color),
+              // deprecated
+              "black-50": rgba($black, 0.5),
+              // deprecated
+              "white-50": rgba($white, 0.5),
+              // deprecated
+              "body-secondary": var(--#{$prefix}secondary-color),
+              "body-tertiary": var(--#{$prefix}tertiary-color),
+              "body-emphasis": var(--#{$prefix}emphasis-color),
+              "reset": inherit,
+            )
+          ),
+      ),
+    "text-opacity": (
+      css-var: true,
+      class: text-opacity,
+      values: (
+        5: 0.05,
+        10: 0.1,
+        15: 0.15,
+        20: 0.2,
+        25: 0.25,
+        30: 0.3,
+        35: 0.35,
+        40: 0.4,
+        45: 0.45,
+        50: 0.5,
+        55: 0.55,
+        60: 0.6,
+        65: 0.65,
+        70: 0.7,
+        75: 0.75,
+        80: 0.8,
+        85: 0.85,
+        90: 0.9,
+        95: 0.95,
+        100: 1,
+      ),
+    ),
+    // scss-docs-end utils-color
+    // scss-docs-start utils-bg-color
+    "background-color":
+      (
+        property: background-color,
+        class: bg,
+        local-vars: (
+          "bg-opacity": 1,
+        ),
+        values:
+          map-merge(
+            $utilities-bg-colors,
+            (
+              "transparent": transparent,
+              "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
+              "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+            )
+          ),
+      ),
+    "bg-opacity": (
+      css-var: true,
+      class: bg-opacity,
+      values: (
+        5: 0.05,
+        10: 0.1,
+        15: 0.15,
+        20: 0.2,
+        25: 0.25,
+        30: 0.3,
+        35: 0.35,
+        40: 0.4,
+        45: 0.45,
+        50: 0.5,
+        55: 0.55,
+        60: 0.6,
+        65: 0.65,
+        70: 0.7,
+        75: 0.75,
+        80: 0.8,
+        85: 0.85,
+        90: 0.9,
+        95: 0.95,
+        100: 1,
+      ),
+    )
+  )
+);

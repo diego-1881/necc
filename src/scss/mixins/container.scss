@@ -1,0 +1,6 @@
+// Container mixins
+@media (max-width: 767.98px) {
+  @mixin make-container($gutter: $container-padding-x) {
+    --#{$prefix}gutter-x: 2.5rem;
+  }
+}

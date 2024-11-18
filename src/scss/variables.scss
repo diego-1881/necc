@@ -3,6 +3,26 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+);
+// scss-docs-end spacer-variables-maps
+
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -14,6 +34,11 @@ $font-family-sans-serif: "Whitney", "Segoe UI", Roboto, "Helvetica Neue", "Noto 
 $font-family-serif: "Sabon LT Std", serif;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$prefix}font-sans-serif);
+
+$line-height-base: 1.5;
+$line-height-xs: 0.85;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
 
 // Components
 //

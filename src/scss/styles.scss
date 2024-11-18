@@ -1,7 +1,7 @@
 // Configuration
 @import "bootstrap/scss/functions";
 
-// Custom colors
+// NECC colors
 @import "colors";
 
 @import "bootstrap/scss/variables";
@@ -9,6 +9,7 @@
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
+// NECC utilities
 
 // Layout & components
 @import "bootstrap/scss/root";
@@ -43,19 +44,26 @@
 @import "bootstrap/scss/offcanvas";
 @import "bootstrap/scss/placeholders";
 
+// NECC
+// Configuration
+@import "variables";
+@import "utilities";
+@import "mixins";
+
+// Layout & components
+@import "type";
+@import "containers";
+@import "buttons";
+@import "icons";
+@import "nav";
+@import "navbar";
+@import "position";
+
+// Custom components
+@import "instagram-feed";
+
 // Helpers
 @import "bootstrap/scss/helpers";
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
-
-// Necc components
-// Configuration
-@import "variables";
-
-// Layout & components
-@import "type";
-@import "buttons";
-@import "icons";
-@import "nav";
-@import "navbar";

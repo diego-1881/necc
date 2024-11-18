@@ -1,0 +1,15 @@
+#instagramFeed {
+  .col-6 {
+    @include media-breakpoint-up(lg) {
+      &:nth-child(2) {
+        padding-bottom: 3rem;
+      }
+      &:nth-child(3) {
+        padding-top: 8rem;
+      }
+      &:nth-child(4) {
+        padding-top: 14rem;
+      }
+    }
+  }
+}
