@@ -50,6 +50,7 @@ h5 {
 
 h6 {
   @include heading-style(1.6, 0.8);
+  font-weight: bold;
 }
 
 p {
