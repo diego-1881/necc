@@ -59,17 +59,18 @@ p {
   font-weight: normal;
   line-height: $line-height-base * 0.9;
 
-  &.lead {
-    font-size: $font-size-base * 1.45;
-  }
-
   & small {
     font-size: $font-size-base * 1.1;
   }
 }
 
+.lead {
+  @include font-size($lead-font-size);
+  font-weight: $lead-font-weight;
+}
+
 .small {
-  font-size: $font-size-base * 0.8;
+  font-size: $font-size-base * 0.75;
 }
 
 .display-3 {

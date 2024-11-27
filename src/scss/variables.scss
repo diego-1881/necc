@@ -38,7 +38,13 @@ $font-family-base: var(--#{$prefix}font-sans-serif);
 $line-height-base: 1.5;
 $line-height-xs: 0.85;
 $line-height-sm: 1.25;
+$line-height-md: 1.5;
 $line-height-lg: 2;
+
+// scss-docs-start type-variables
+$lead-font-size: $font-size-base * 1.4;
+$lead-font-weight: 600;
+// scss-docs-end type-variables
 
 // Components
 //
@@ -79,3 +85,19 @@ $nav-link-font-size: $font-size-base * 1.12;
 $nav-link-color: $white;
 $nav-border-color: rgba($white, 0.175);
 // scss-docs-end nav-variables
+
+// Close
+
+// scss-docs-start close-variables
+$btn-close-width: 0.7emma;
+$btn-close-height: $btn-close-width;
+$btn-close-color: $primary;
+$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}' stroke='#{$btn-close-color}' stroke-width='0.5'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
+$btn-close-opacity: 1;
+// scss-docs-end close-variables
+
+// Cards
+
+// scss-docs-start card-variables
+$card-team-height: 21.5rem;
+// scss-docs-end card-variables
