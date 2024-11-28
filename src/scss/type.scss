@@ -30,6 +30,7 @@ body {
   line-height: $line-height-base * $line-height-multiplier;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01rem;
 }
 
 h2 {
@@ -51,6 +52,7 @@ h5 {
 h6 {
   @include heading-style(1.6, 0.8);
   font-weight: bold;
+  letter-spacing: normal;
 }
 
 p {
@@ -58,9 +60,14 @@ p {
   font-size: $font-size-base * 1.2;
   font-weight: normal;
   line-height: $line-height-base * 0.9;
+  margin-bottom: $paragraph-margin-bottom;
 
   & small {
     font-size: $font-size-base * 1.1;
+  }
+
+  + video {
+    margin-top: $paragraph-margin-bottom * 1.35;
   }
 }
 

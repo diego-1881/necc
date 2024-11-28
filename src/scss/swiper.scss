@@ -1,0 +1,95 @@
+.swiper {
+  width: 100%;
+  height: $swiper-height;
+}
+
+.swiper-pagination {
+  position: absolute;
+  transition: $transition-fade;
+  transform: translate3d(0, 0, 0);
+  z-index: $zindex-swiper-image;
+  width: 100%;
+  bottom: 0;
+  border-top: $border-width $border-style $border-color-translucent;
+  padding-top: $swiper-pagination-padding-top;
+}
+
+.swiper-pagination-bullet {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-family-serif;
+  font-size: $swiper-navigation-font-size;
+  margin-right: $swiper-padding-x;
+  cursor: pointer;
+
+  &[aria-current="true"] {
+    color: $primary;
+    font-size: $swiper-navigation-font-size * 1.35;
+    vertical-align: middle;
+  }
+}
+
+.swiper-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: $swiper-height * 0.65;
+  border-radius: $border-radius;
+}
+
+.swiper-navigation {
+  position: absolute;
+  z-index: $zindex-swiper-navigation;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - $grid-gutter-width);
+  bottom: $swiper-navigation-bottom;
+}
+
+.swiper-buttons {
+  display: flex;
+  align-items: center;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    border-radius: $btn-border-radius;
+    background: $primary;
+    width: $swiper-button-size;
+    height: $swiper-button-size;
+    color: $white;
+
+    &::after {
+      @include icon-caret-down();
+      display: inline-flex;
+      border: 0;
+      width: $swiper-button-size / 2.3;
+      height: $swiper-button-size / 2.3;
+      vertical-align: middle;
+      transform: rotate(90deg);
+      transform-origin: 55% 45%;
+      content: "";
+    }
+  }
+
+  .swiper-button-next {
+    order: 1;
+    margin-left: $swiper-padding-x * 0.5;
+
+    &:after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .swiper-button-prev {
+    &:after {
+      transform-origin: 45% 45%;
+    }
+  }
+}
+
+.swiper-navigation-title {
+  margin: 0;
+  color: $dark;
+}

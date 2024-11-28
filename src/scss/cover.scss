@@ -1,0 +1,8 @@
+.cover {
+  &.cover-single-page {
+    height: $cover-single-page-height;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

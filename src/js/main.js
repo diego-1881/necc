@@ -1,5 +1,26 @@
 import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
+import Swiper from "swiper/bundle";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
+const bulletTexts = Array.from(document.querySelectorAll("#dynamic-texts span")).map((span) => span.getAttribute("data-text"));
+
+const swiper = new Swiper(".swiper", {
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + bulletTexts[index] + "</span>";
+    },
+  },
+});
 
 document.addEventListener("DOMContentLoaded", async () => {
   async function loadHTML(elementId, url) {
