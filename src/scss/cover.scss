@@ -4,5 +4,19 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    h1 {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .cover {
+    &.cover-single-page {
+      .h3 {
+        @include heading-style(2.5, 0.7);
+      }
+    }
   }
 }

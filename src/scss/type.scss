@@ -86,3 +86,17 @@ p {
   font-weight: normal;
   line-height: $line-height-base * 0.9;
 }
+
+@include media-breakpoint-down(lg) {
+  h2 {
+    @include heading-style(4);
+  }
+
+  h3 {
+    @include heading-style(3.45, 0.7);
+  }
+
+  .display-3 {
+    font-size: $font-size-base * 1.3;
+  }
+}

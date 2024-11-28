@@ -1,3 +1,20 @@
+// Navbar
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+@include media-breakpoint-down(sm) {
+  .navbar-brand {
+    img {
+      width: 11rem;
+      height: auto;
+    }
+  }
+}
+
 // Responsive navbar
 //
 // Custom styles for responsive collapsing and toggling of navbar contents.
