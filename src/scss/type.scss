@@ -21,6 +21,7 @@ body {
   font-size: $font-size-base * 1.2;
   font-weight: normal;
   line-height: $line-height-base * 0.9;
+  color: $dark;
 }
 
 @mixin heading-style($font-size-multiplier, $line-height-multiplier: 1) {
@@ -85,6 +86,10 @@ p {
   font-size: $font-size-base * 1.63;
   font-weight: normal;
   line-height: $line-height-base * 0.9;
+}
+
+ul {
+  margin-bottom: $paragraph-margin-bottom;
 }
 
 @include media-breakpoint-down(lg) {

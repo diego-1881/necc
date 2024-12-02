@@ -1,0 +1,9 @@
+body {
+  padding-top: 6.5rem;
+}
+
+@include media-breakpoint-down(lg) {
+  body {
+    padding-top: 4.4rem;
+  }
+}
