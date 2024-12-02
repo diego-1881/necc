@@ -129,6 +129,45 @@ $btn-close-opacity: 1;
 $card-team-height: 21.5rem;
 // scss-docs-end card-variables
 
+// Accordion
+
+// scss-docs-start accordion-variables
+$accordion-padding-y: 0.3rem;
+$accordion-padding-x: 3rem;
+// $accordion-color: var(--#{$prefix}body-color) !default;
+// $accordion-bg: var(--#{$prefix}body-bg) !default;
+// $accordion-border-width: var(--#{$prefix}border-width) !default;
+$accordion-border-color: var(--#{$prefix}border-color-translucent);
+// $accordion-border-radius: var(--#{$prefix}border-radius) !default;
+// $accordion-inner-border-radius: subtract($accordion-border-radius, $accordion-border-width) !default;
+
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-padding-x: $accordion-padding-x;
+
+// $accordion-button-padding-y: $accordion-padding-y !default;
+// $accordion-button-padding-x: $accordion-padding-x !default;
+$accordion-button-color: $primary;
+// $accordion-button-bg: var(--#{$prefix}accordion-bg) !default;
+// $accordion-transition: $btn-transition, border-radius 0.15s ease !default;
+// $accordion-button-active-bg: var(--#{$prefix}primary-bg-subtle) !default;
+// $accordion-button-active-color: var(--#{$prefix}primary-text-emphasis) !default;
+
+// // fusv-disable
+// $accordion-button-focus-border-color: $input-focus-border-color !default; // Deprecated in v5.3.3
+// // fusv-enable
+// $accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
+
+$accordion-icon-width: 0.8rem;
+// $accordion-icon-color: $body-color !default;
+// $accordion-icon-active-color: $primary-text-emphasis !default;
+// $accordion-icon-transition: transform 0.2s ease-in-out !default;
+// $accordion-icon-transform: rotate(-180deg) !default;
+
+$accordion-button-icon: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="13px" height="13px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M6.5,0C6.112,0 5.797,0.315 5.797,0.703L5.797,5.797L0.703,5.797C0.315,5.797 0,6.112 0,6.5C0,6.888 0.315,7.203 0.703,7.203L5.797,7.203L5.797,12.297C5.797,12.685 6.112,13 6.5,13C6.888,13 7.203,12.685 7.203,12.297L7.203,7.203L12.297,7.203C12.685,7.203 13,6.888 13,6.5C13,6.112 12.685,5.797 12.297,5.797L7.203,5.797L7.203,0.703C7.203,0.315 6.888,0 6.5,0Z" style="fill:#{$primary};fill-rule:nonzero;"/></svg>');
+
+$accordion-button-active-icon: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="13px" height="2px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g transform="matrix(1,0,0,1,0,-5.79732)"><path d="M12.297,5.797L0.703,5.797C0.315,5.797 0,6.112 0,6.5C0,6.888 0.315,7.203 0.703,7.203L12.297,7.203C12.685,7.203 13,6.888 13,6.5C13,6.112 12.685,5.797 12.297,5.797Z" style="fill:#{$pink};fill-rule:nonzero;"/></g></svg>');
+// scss-docs-end accordion-variables
+
 // Cover
 
 // scss-docs-start cover-variables

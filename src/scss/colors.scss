@@ -10,6 +10,7 @@ $black: #000;
 // scss-docs-start color-variables
 $blue: #0769d2;
 $cyan: #70badd;
+$pink: #e41458;
 
 // scss-docs-end color-variables
 
@@ -27,12 +28,14 @@ $primary: $blue;
 $secondary: $cyan;
 $light: $white;
 $dark: $gray-800;
+$pink: $pink;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "pink": $pink,
   "light": $light,
   "dark": $dark,
 );
