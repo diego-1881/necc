@@ -3,9 +3,40 @@
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
 
+.navbar {
+  // scss-docs-start navbar-css-vars
+  --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+  --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+  padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+  // @include gradient-bg();
+
+  &.navbar-scrolled {
+    padding: 0;
+
+    .navbar-brand {
+      .navbar-brand-logo-main {
+        display: none;
+      }
+
+      .navbar-brand-logo-on-scroll {
+        display: block;
+      }
+    }
+  }
+}
+
 // Navbar brand
 //
 // Used for brand, project, or site names.
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .navbar-brand-logo-on-scroll {
+    display: none;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .navbar-brand {
     img {

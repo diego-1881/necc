@@ -93,6 +93,18 @@ function filterNewsByCategory() {
   });
 }
 
+function handleScroll() {
+  const topNav = document.getElementById("topNav");
+  if (window.scrollY > 80) {
+    topNav.classList.add("navbar-scrolled");
+  } else {
+    topNav.classList.remove("navbar-scrolled");
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+handleScroll();
+
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
     disableUnselectedCards();

@@ -113,6 +113,13 @@ $nav-link-color: $white;
 $nav-border-color: rgba($white, 0.175);
 // scss-docs-end nav-variables
 
+// Navbar
+
+// scss-docs-start navbar-variables
+$navbar-padding-y: $spacer * 0.7;
+$navbar-padding-x: null;
+// scss-docs-end navbar-variables
+
 // Close
 
 // scss-docs-start close-variables

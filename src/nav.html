@@ -1,6 +1,7 @@
 <div class="container-fluid px-0 px-sm-5 py-sm-1">
-  <a class="navbar-brand ps-3 ps-sm-0" href="#">
-    <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="242" height="70.78" class="d-inline-block align-text-top" />
+  <a class="navbar-brand ps-3 ps-sm-0" href="./index.html">
+    <img src="./img/necc-logo-white.svg" alt="NECC Logo - White" width="225" height="65.81" class="navbar-brand-logo-main" />
+    <img src="./img/necc-brandmark-white.svg" alt="NECC Brand Mark - White" width="40" height="40" class="navbar-brand-logo-on-scroll" />
   </a>
 
   <button
@@ -80,17 +81,32 @@
               aria-expanded="false"
               >Education Overview</a
             >
-            <div class="dropdown-menu" aria-labelledby="dropdown-layouts">
+            <!-- <div class="dropdown-menu" aria-labelledby="dropdown-layouts">
               <a class="dropdown-item" href="#">Fullscreen</a>
               <a class="dropdown-item" href="#">Empty</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Magic</a>
-            </div>
+            </div> -->
           </li>
           <li><a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="#">Leadership</a></li>
           <li><a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="#">Contact Us</a></li>
           <li><a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="#">Community</a></li>
-          <li><a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="#">Media</a></li>
+          <li class="dropend">
+            <a
+              class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2"
+              href="#"
+              id="dropdown-media"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Media</a
+            >
+            <div class="dropdown-menu bg-secondary py-2 px-3 shadow border-0" aria-labelledby="dropdown-media">
+              <a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="./news.html">News</a>
+              <a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="#">Publications</a>
+              <a class="nav-link dropdown-item bg-secondary text-white py-3 py-sm-2 ps-5 ps-sm-2" href="#">Events</a>
+            </div>
+          </li>
         </ul>
       </li>
       <!-- .nav-item -->
