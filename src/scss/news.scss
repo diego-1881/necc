@@ -1,0 +1,33 @@
+.news {
+  .news-header-image {
+    width: 100%;
+    height: 14.625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $border-radius-lg;
+  }
+}
+
+.news-filters {
+  li {
+    a {
+      text-decoration: none;
+
+      &.active {
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+}
+
+.news-single {
+  .news-single-header-image {
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $border-radius-lg;
+  }
+}

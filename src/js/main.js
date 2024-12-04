@@ -59,9 +59,44 @@ function disableUnselectedCards() {
   });
 }
 
+// News
+// Filter
+function filterNewsByCategory() {
+  const filters = document.querySelectorAll(".news-filters [data-filter]");
+  const articles = document.querySelectorAll(".news");
+
+  filters.forEach((filter) => {
+    filter.addEventListener("click", function (event) {
+      event.preventDefault();
+      const category = filter.getAttribute("data-filter");
+
+      filters.forEach((f) => f.classList.remove("active"));
+      filter.classList.add("active");
+
+      articles.forEach((article) => {
+        if (category === "all" || article.getAttribute("data-category") === category) {
+          article.classList.remove("fade", "show");
+          void article.offsetWidth;
+          article.classList.add("fade", "show");
+          article.style.display = "block";
+        } else {
+          article.classList.remove("fade", "show");
+          void article.offsetWidth;
+          article.classList.add("fade");
+
+          setTimeout(() => {
+            article.style.display = "none";
+          }, 200);
+        }
+      });
+    });
+  });
+}
+
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
     disableUnselectedCards();
+    filterNewsByCategory();
   });
 }
 init();
