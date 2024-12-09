@@ -31,4 +31,13 @@
     background-position: center;
     border-radius: $border-radius-lg;
   }
+
+  .necc-social-icon {
+    --social-icon-size: 1.13rem;
+
+    &.necc-social-icon-x,
+    &.necc-social-icon-x-dark {
+      --social-icon-size: 1.12rem;
+    }
+  }
 }
