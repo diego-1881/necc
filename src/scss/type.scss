@@ -63,10 +63,6 @@ p {
   line-height: $line-height-base * 0.9;
   margin-bottom: $paragraph-margin-bottom;
 
-  & small {
-    font-size: $font-size-base * 1.1;
-  }
-
   + video {
     margin-top: $paragraph-margin-bottom * 1.35;
   }
