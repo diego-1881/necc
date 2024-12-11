@@ -4,6 +4,7 @@
 
 .accordion {
   // scss-docs-start accordion-css-vars
+  --#{$prefix}accordion-bg: none;
   --#{$prefix}accordion-border-color: #{$accordion-border-color};
   --#{$prefix}accordion-btn-color: #{$accordion-button-color};
   --#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
