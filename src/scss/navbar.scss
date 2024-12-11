@@ -40,7 +40,7 @@
 @include media-breakpoint-down(sm) {
   .navbar-brand {
     img {
-      width: 11rem;
+      max-width: 5rem;
       height: auto;
     }
   }
