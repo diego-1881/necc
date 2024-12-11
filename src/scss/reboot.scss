@@ -29,6 +29,15 @@ body {
 }
 // scss-docs-end reboot-body-rules
 
+// Content grouping
+//
+// 1. Reset Firefox's gray color
+
+hr {
+  border-top: $hr-border-width solid $hr-border-color;
+  opacity: $hr-opacity;
+}
+
 // Typography
 //
 // 1. Remove top margins from headings
@@ -83,6 +92,15 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
+}
+
+// Strong
+//
+// Add the correct font weight in Chrome, Edge, and Safari
+
+b,
+strong {
+  font-weight: $font-weight-semibold;
 }
 
 // Small

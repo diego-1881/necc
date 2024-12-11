@@ -45,6 +45,10 @@ $line-height-lg: 2;
 $lead-font-size: $font-size-base * 1.4;
 $lead-font-weight: 600;
 $small-font-size: $font-size-base * 1.1;
+
+$hr-border-color: $black; // Allows for inherited colors
+$hr-border-width: var(--#{$prefix}border-width);
+$hr-opacity: 0.175;
 // scss-docs-end type-variables
 
 // Paragraphs
