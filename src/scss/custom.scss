@@ -1,0 +1,14 @@
+section {
+  &.section-left-image,
+  &.section-right-image {
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+    &.title-static {
+      h3 {
+        font-size: $font-size-base * 3.7;
+      }
+    }
+  }
+}
