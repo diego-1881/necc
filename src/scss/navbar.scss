@@ -11,6 +11,7 @@
   // @include gradient-bg();
 
   &.navbar-scrolled {
+    background-color: $secondary;
     padding: 0;
 
     .navbar-brand {
