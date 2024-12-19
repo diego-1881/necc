@@ -51,6 +51,13 @@ $hr-border-width: var(--#{$prefix}border-width);
 $hr-opacity: 0.175;
 // scss-docs-end type-variables
 
+// scss-docs-start box-shadow-variables
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
+$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075);
+// scss-docs-end box-shadow-variables
+
 // Paragraphs
 //
 // Style p element.
@@ -110,18 +117,27 @@ $btn-line-height: $input-btn-line-height;
 $btn-border-radius: var(--#{$prefix}border-radius-pill);
 // scss-docs-end btn-variables
 
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// scss-docs-start dropdown-variables
+$dropdown-box-shadow: var(--#{$prefix}box-shadow);
+// scss-docs-end dropdown-variables
+
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-font-size: $font-size-base * 1.12;
+$nav-link-font-size: $font-size-base * 1.07;
 $nav-link-color: $white;
 $nav-border-color: rgba($white, 0.175);
+$nav-link-font-weight: 600;
 // scss-docs-end nav-variables
 
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y: $spacer * 0.7;
+$navbar-padding-y: 0.45rem;
 $navbar-padding-x: null;
 // scss-docs-end navbar-variables
 

@@ -19,7 +19,7 @@ body {
   background-color: var(--#{$prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
-  padding-top: 5.95rem;
+  padding-top: 5.5rem;
 
   &.hero-video-fullscreen {
     padding-top: 0;
@@ -104,7 +104,7 @@ p {
 
 b,
 strong {
-  font-weight: $font-weight-semibold;
+  font-weight: 500;
 }
 
 // Small

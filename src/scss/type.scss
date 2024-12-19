@@ -86,6 +86,8 @@ p {
   font-size: $font-size-base * 1.63;
   font-weight: normal;
   line-height: $line-height-base * 0.9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul {

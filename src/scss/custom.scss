@@ -10,5 +10,9 @@ section {
         font-size: $font-size-base * 3.7;
       }
     }
+
+    + :not(.section-left-image):not(.section-right-image) {
+      margin-top: 5rem;
+    }
   }
 }

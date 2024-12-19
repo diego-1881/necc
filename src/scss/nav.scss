@@ -6,6 +6,9 @@
 .nav-link {
   font-size: $nav-link-font-size;
   color: $nav-link-color;
+  font-weight: $nav-link-font-weight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @include media-breakpoint-down(sm) {

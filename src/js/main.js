@@ -32,6 +32,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   await loadHTML("footer", "footer.html");
   await loadHTML("topNav", "nav.html");
+
+  const navbarDropdowns = document.querySelectorAll("#mainNavbar .dropend > .dropdown-item");
+  navbarDropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+    });
+  });
 });
 
 // Our leadership team

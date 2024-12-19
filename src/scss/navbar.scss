@@ -8,11 +8,16 @@
   --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
   --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
   padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+  background-color: transparent;
+  transition: background-color 0.2s;
   // @include gradient-bg();
+
+  &:hover {
+    background-color: $secondary;
+  }
 
   &.navbar-scrolled {
     background-color: $secondary;
-    padding: 0;
 
     .navbar-brand {
       .navbar-brand-logo-main {
@@ -30,9 +35,6 @@
 //
 // Used for brand, project, or site names.
 .navbar-brand {
-  padding-top: 0;
-  padding-bottom: 0;
-
   .navbar-brand-logo-on-scroll {
     display: none;
   }
@@ -70,6 +72,50 @@
       transform: rotate(180deg);
     }
   }
+
+  .dropdown-menu {
+    background: $secondary;
+  }
+
+  .dropdown-item {
+    &:active,
+    &:focus,
+    &:hover {
+      background: $secondary;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-collapse {
+    max-height: 76vh;
+    overflow-y: auto;
+
+    .dropdown-menu {
+      background: shade-color($secondary, 10%);
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .dropdown-item {
+      &:active,
+      &:focus,
+      &:hover {
+        background: $secondary;
+      }
+    }
+
+    // third level dropdown menu
+    .dropend {
+      .dropdown-item {
+        &:active,
+        &:focus,
+        &:hover {
+          background: shade-color($secondary, 10%);
+        }
+      }
+    }
+  }
 }
 
 // scss-docs-start navbar-expand-loop
@@ -89,17 +135,24 @@
             &:hover {
               > .dropdown-menu {
                 display: block;
+                box-shadow: $dropdown-box-shadow;
               }
             }
 
             .dropdown-toggle {
-              &::after {
-                display: none;
-              }
+              // &::after {
+              //   display: none;
+              // }
             }
           }
 
           .dropend {
+            .dropdown-toggle {
+              &::after {
+                display: block;
+              }
+            }
+
             &:hover > .dropdown-menu {
               position: absolute;
               top: 0;
