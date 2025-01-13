@@ -1,6 +1,7 @@
 import { resolve } from "path";
+import { defineConfig } from "vite";
 
-export default {
+export default defineConfig({
   root: resolve(__dirname, "src"),
   build: {
     outDir: "../../wp/wp-content/themes/necc/",
@@ -8,26 +9,32 @@ export default {
       output: {
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split(".").pop();
-          if (/png|jpe?g|webp|gif|svg/.test(extType)) {
-            extType = "img";
-          } else if (/css/.test(extType)) {
+          if (/css/.test(extType)) {
             extType = "css";
           } else if (/js/.test(extType)) {
             extType = "js";
-          } else if (/mp4/.test(extType)) {
-            extType = "video";
-          } else if (/woff2/.test(extType)) {
-            extType = "fonts";
           }
           return `assets/${extType}/[name][extname]`;
         },
         chunkFileNames: "assets/js/[name].js",
         entryFileNames: "assets/js/[name].js",
       },
+      plugins: [
+        {
+          name: "exclude-assets",
+          generateBundle(options, bundle) {
+            for (const fileName in bundle) {
+              if (/\.(mp4|png|jpe?g|webp|gif|svg|woff2|html)$/.test(fileName)) {
+                delete bundle[fileName];
+              }
+            }
+          },
+        },
+      ],
     },
   },
   server: {
     port: 8090,
     hot: true,
   },
-};
+});
