@@ -5,7 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const bulletTexts = Array.from(document.querySelectorAll("#dynamic-texts span")).map((span) => span.getAttribute("data-text"));
+const bulletTexts = Array.from(document.querySelectorAll(".bullet-title")).map((span) => span.getAttribute("data-text"));
 
 const swiper = new Swiper(".swiper", {
   modules: [Navigation, Pagination],
