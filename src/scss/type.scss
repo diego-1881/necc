@@ -66,6 +66,39 @@ p {
   + video {
     margin-top: $paragraph-margin-bottom * 1.35;
   }
+
+  &:last-child {
+    margin-bottom: $paragraph-margin-bottom * 0.3;
+
+    &:has(> img) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.bg-primary {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+@mixin heading-sans-serif() {
+  font-family: "Whitney", sans-serif;
+  font-size: $font-size-base * 1.63;
+  font-weight: normal;
+  line-height: $line-height-base * 0.9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .lead {
@@ -82,12 +115,11 @@ p {
 }
 
 .display-3 {
-  font-family: "Whitney", sans-serif;
-  font-size: $font-size-base * 1.63;
-  font-weight: normal;
-  line-height: $line-height-base * 0.9;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @include heading-sans-serif();
+
+  p {
+    @include heading-sans-serif();
+  }
 }
 
 ul {

@@ -16,3 +16,9 @@ section {
     }
   }
 }
+
+.col-single {
+  p {
+    @include heading-sans-serif();
+  }
+}
