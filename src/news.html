@@ -11,7 +11,7 @@
     <nav id="topNav" class="navbar navbar-expand-lg navbar-dark fixed-top bg-secondary" aria-label="Main Navbar"></nav>
 
     <main>
-      <section class="py- bg-secondary bg-opacity-20">
+      <section class="py-5 bg-secondary bg-opacity-20">
         <div class="container py-3">
           <div class="d-flex">
             <h2 class="text-primary mb-0 d-inline-block">News</h2>
@@ -21,12 +21,21 @@
             </div>
           </div>
 
-          <ul class="news-filters list-unstyled d-flex">
-            <li class="me-4 pe-2 fs-6"><a href="#" class="active" data-filter="all">All</a></li>
-            <li class="me-4 pe-2 fs-6"><a href="#" data-filter="insight">Insight</a></li>
-            <li class="me-4 pe-2 fs-6"><a href="#" data-filter="in-the-media">In the Media</a></li>
-            <li class="me-4 pe-2 fs-6"><a href="#" data-filter="necc">NECC</a></li>
-          </ul>
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <ul class="news-filters list-unstyled d-flex mb-0">
+              <li class="me-4 pe-2 fs-6"><a href="#" class="active" data-filter="all">All</a></li>
+              <li class="me-4 pe-2 fs-6"><a href="#" data-filter="insight">Insight</a></li>
+              <li class="me-4 pe-2 fs-6"><a href="#" data-filter="in-the-media">In the Media</a></li>
+              <li class="me-4 pe-2 fs-6"><a href="#" data-filter="necc">NECC</a></li>
+            </ul>
+
+            <div class="search-container">
+              <input type="search" class="form-control form-control-search bg-transparent" placeholder="Search" />
+
+              <i class="necc-icon necc-icon-search-slate search-icon"></i>
+              <i class="necc-icon necc-icon-sm necc-icon-close-slate search-close"></i>
+            </div>
+          </div>
 
           <div class="row row-cols-1 row-cols-lg-3">
             <article class="col news fade show my-4 py-2" data-category="necc">
@@ -181,6 +190,14 @@
             </article>
           </div>
           <!-- .row -->
+
+          <div class="pagination d-flex justify-content-center py-4 pb-3">
+            <form method="get" action="">
+              <input type="number" class="form-control page-number" name="paged" min="1" max="2" value="1" />
+              <span class="fs-6 ms-1"> of <span> 2</span></span>
+              <button type="submit" name="paged" value="2" class="next ms-2"></button>
+            </form>
+          </div>
         </div>
         <!-- .container -->
       </section>

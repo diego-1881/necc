@@ -115,8 +115,40 @@ handleScroll();
 
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
+    const searchIcon = document.querySelector(".search-icon");
+    const searchContainer = document.querySelector(".search-container");
+    const searchInput = document.querySelector(".form-control-search");
+    const searchClose = document.querySelector(".search-close");
+
+    if (searchIcon) {
+      handleSearchIconClick(searchIcon, searchContainer, searchInput);
+      handleSearchCloseClick(searchClose, searchContainer, searchInput);
+    }
     disableUnselectedCards();
-    filterNewsByCategory();
+    filterNewsByCategory(searchIcon, searchContainer, searchInput);
   });
 }
 init();
+
+function handleSearchIconClick(searchIcon, searchContainer, searchInput) {
+  searchIcon.addEventListener("click", function () {
+    handleSearchExpand(searchContainer, searchInput);
+  });
+}
+
+function handleSearchCloseClick(searchClose, searchContainer, searchInput) {
+  searchClose.addEventListener("click", function () {
+    handleSearchContract(searchContainer, searchInput);
+  });
+}
+
+function handleSearchExpand(searchContainer, searchInput) {
+  searchContainer.classList.add("search-container-expanded");
+  searchInput.classList.add("form-control-search-expanded");
+  searchInput.focus();
+}
+
+function handleSearchContract(searchContainer, searchInput) {
+  searchContainer.classList.remove("search-container-expanded");
+  searchInput.classList.remove("form-control-search-expanded");
+}

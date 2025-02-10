@@ -60,7 +60,7 @@
 .navbar-collapse {
   .dropdown-toggle {
     &::after {
-      @include icon-caret-down();
+      @include icon-caret-down(ffffff);
       display: inline-flex;
       border: 0;
       width: $spacer / 1.3;

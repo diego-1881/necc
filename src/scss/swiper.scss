@@ -61,7 +61,7 @@
     color: $white;
 
     &::after {
-      @include icon-caret-down();
+      @include icon-caret-down(ffffff);
       display: inline-flex;
       border: 0;
       width: $swiper-button-size / 2.3;
