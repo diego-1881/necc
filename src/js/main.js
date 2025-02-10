@@ -113,23 +113,7 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 handleScroll();
 
-function init() {
-  document.addEventListener("DOMContentLoaded", async () => {
-    const searchIcon = document.querySelector(".search-icon");
-    const searchContainer = document.querySelector(".search-container");
-    const searchInput = document.querySelector(".form-control-search");
-    const searchClose = document.querySelector(".search-close");
-
-    if (searchIcon) {
-      handleSearchIconClick(searchIcon, searchContainer, searchInput);
-      handleSearchCloseClick(searchClose, searchContainer, searchInput);
-    }
-    disableUnselectedCards();
-    filterNewsByCategory(searchIcon, searchContainer, searchInput);
-  });
-}
-init();
-
+// Search component animations
 function handleSearchIconClick(searchIcon, searchContainer, searchInput) {
   searchIcon.addEventListener("click", function () {
     handleSearchExpand(searchContainer, searchInput);
@@ -152,3 +136,20 @@ function handleSearchContract(searchContainer, searchInput) {
   searchContainer.classList.remove("search-container-expanded");
   searchInput.classList.remove("form-control-search-expanded");
 }
+
+function init() {
+  document.addEventListener("DOMContentLoaded", async () => {
+    const searchIcon = document.querySelector(".search-icon");
+    const searchContainer = document.querySelector(".search-container");
+    const searchInput = document.querySelector(".form-control-search");
+    const searchClose = document.querySelector(".search-close");
+
+    if (searchIcon) {
+      handleSearchIconClick(searchIcon, searchContainer, searchInput);
+      handleSearchCloseClick(searchClose, searchContainer, searchInput);
+    }
+    disableUnselectedCards();
+    filterNewsByCategory(searchIcon, searchContainer, searchInput);
+  });
+}
+init();
