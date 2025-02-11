@@ -101,8 +101,10 @@ function filterNewsByCategory() {
   });
 }
 
+// Navbar
 function handleScroll() {
   const topNav = document.getElementById("topNav");
+
   if (window.scrollY > 80) {
     topNav.classList.add("navbar-scrolled");
   } else {
@@ -113,7 +115,7 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 handleScroll();
 
-// Search component animations
+// Search component
 function handleSearchIconClick(searchIcon, searchContainer, searchInput) {
   searchIcon.addEventListener("click", function () {
     handleSearchExpand(searchContainer, searchInput);
