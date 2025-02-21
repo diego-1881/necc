@@ -19,18 +19,8 @@ body {
   background-color: var(--#{$prefix}body-bg); // 2
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
-  padding-top: 5.5rem;
-
-  &.hero-video-fullscreen {
-    padding-top: 0;
-  }
 }
 
-@include media-breakpoint-down(lg) {
-  body {
-    padding-top: 4.4rem;
-  }
-}
 // scss-docs-end reboot-body-rules
 
 // Content grouping
@@ -40,6 +30,12 @@ body {
 hr {
   border-top: $hr-border-width solid $hr-border-color;
   opacity: $hr-opacity;
+}
+
+.bg-primary {
+  hr {
+    border-top-color: $white;
+  }
 }
 
 // Typography
@@ -104,7 +100,7 @@ p {
 
 b,
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 // Small

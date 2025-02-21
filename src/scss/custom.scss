@@ -11,10 +11,6 @@ section {
         font-size: $font-size-base * 3.7;
       }
     }
-
-    + :not(.section-left-image):not(.section-right-image) {
-      margin-top: 5rem;
-    }
   }
 }
 
@@ -43,5 +39,44 @@ section {
 .admin-bar {
   .navbar {
     top: 2rem;
+
+    &.navbar-scrolled {
+      top: 0rem;
+    }
+  }
+}
+
+.wp-video {
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+
+  br {
+    display: none;
+  }
+
+  .wp-video-shortcode {
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+  }
+}
+
+// Global responsive
+@include media-breakpoint-down(md) {
+  // Layout
+  .row-cols-md-3 {
+    .col {
+      margin-bottom: $spacer * 2.5;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // WordPress
+  .admin-bar {
+    .navbar {
+      top: 2.85rem;
+    }
   }
 }
