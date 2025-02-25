@@ -66,6 +66,10 @@ p {
   + video {
     margin-top: $paragraph-margin-bottom * 1.35;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 section {

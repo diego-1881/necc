@@ -4,6 +4,7 @@
 // `<nav>`s, `<ul>`s or `<ol>`s.
 
 .nav-link {
+  padding: $nav-link-padding-y $nav-link-padding-x;
   font-size: $nav-link-font-size;
   color: $nav-link-color;
   font-weight: $nav-link-font-weight;
@@ -14,5 +15,14 @@
 @include media-breakpoint-down(sm) {
   .nav-link {
     border-bottom: $border-width solid $nav-border-color;
+    padding: $nav-link-padding-y * 1.7 $nav-link-padding-x;
+  }
+
+  .nav-item {
+    &:last-child {
+      .nav-link {
+        border-bottom: 0;
+      }
+    }
   }
 }

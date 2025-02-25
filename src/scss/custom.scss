@@ -9,6 +9,7 @@ section {
     &.title-static {
       h3 {
         font-size: $font-size-base * 3.7;
+        padding-left: $spacer;
       }
     }
   }
@@ -58,18 +59,41 @@ section {
     border-radius: $border-radius-lg;
     overflow: hidden;
   }
+
+  &:last-child {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 // Global responsive
 @include media-breakpoint-down(md) {
+  section {
+    &.section-left-image,
+    &.section-right-image {
+      &.title-static {
+        h3 {
+          font-size: $font-size-base * 2.2;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
   // Layout
   .row-cols-md-3 {
     .col {
-      margin-bottom: $spacer * 2.5;
+      margin-bottom: $spacer * 2;
 
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  .the-content {
+    .order-1 {
+      margin-bottom: $spacer * 1.5;
     }
   }
 
