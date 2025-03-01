@@ -1,46 +1,5 @@
 import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
-import Swiper from "swiper/bundle";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-
-const bulletTexts = Array.from(document.querySelectorAll(".bullet-title")).map((span) => span.getAttribute("data-text"));
-
-const swiper = new Swiper(".swiper", {
-  modules: [Navigation, Pagination],
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + bulletTexts[index] + "</span>";
-    },
-  },
-});
-
-document.addEventListener("DOMContentLoaded", async () => {
-  async function loadHTML(elementId, url) {
-    const container = document.getElementById(elementId);
-    const response = await fetch(url);
-    const html = await response.text();
-    container.innerHTML = html;
-  }
-
-  await loadHTML("footer", "footer.html");
-  await loadHTML("topNav", "nav.html");
-
-  const navbarDropdowns = document.querySelectorAll("#mainNavbar .dropend > .dropdown-item");
-  navbarDropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-    });
-  });
-});
 
 // Our leadership team
 // Disable the cards that are not selected
@@ -139,6 +98,25 @@ function handleSearchContract(searchContainer, searchInput) {
   searchInput.classList.remove("form-control-search-expanded");
 }
 
+// Functions for the HTML mockup only
+async function loadHTMLParts(elementId, url) {
+  const container = document.getElementById(elementId);
+  const response = await fetch(url);
+  const html = await response.text();
+  container.innerHTML = html;
+}
+
+function handleNavbarDropdowns() {
+  const navbarDropdowns = document.querySelectorAll("#mainNavbar .dropend > .dropdown-item");
+
+  navbarDropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+    });
+  });
+}
+
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
     const searchIcon = document.querySelector(".search-icon");
@@ -152,6 +130,10 @@ function init() {
     }
     disableUnselectedCards();
     filterNewsByCategory(searchIcon, searchContainer, searchInput);
+
+    await loadHTMLParts("footer", "footer.html");
+    await loadHTMLParts("topNav", "nav.html");
+    handleNavbarDropdowns();
   });
 }
 init();

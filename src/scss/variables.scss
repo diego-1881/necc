@@ -223,10 +223,12 @@ $pagination-font-size: $font-size-base;
 // scss-docs-start Swiper-variables
 $swiper-height: 38rem;
 $swiper-pagination-padding-top: 1rem;
+$swiper-pagination-margin-top: 1rem;
+$swiper-navigation-margin-top: 1rem;
 $swiper-padding-x: 1.7rem;
 $swiper-button-size: 2.3rem;
-$swiper-navigation-bottom: 4.6rem;
-$swiper-navigation-font-size: 1.4rem;
+$swiper-navigation-bottom: -8.5rem;
+$swiper-navigation-font-size: $font-size-base;
 // scss-docs-end Swiper-variables
 
 // Z-index master list

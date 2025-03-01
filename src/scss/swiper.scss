@@ -1,17 +1,19 @@
 .swiper {
   width: 100%;
-  height: $swiper-height;
 }
 
 .swiper-pagination {
-  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   transition: $transition-fade;
   transform: translate3d(0, 0, 0);
   z-index: $zindex-swiper-image;
   width: 100%;
-  bottom: 0;
   border-top: $border-width $border-style $border-color-translucent;
   padding-top: $swiper-pagination-padding-top;
+  margin-top: $swiper-pagination-margin-top;
 }
 
 .swiper-pagination-bullet {
@@ -19,12 +21,12 @@
   -moz-osx-font-smoothing: grayscale;
   font-family: $font-family-serif;
   font-size: $swiper-navigation-font-size;
-  margin-right: $swiper-padding-x;
   cursor: pointer;
+  vertical-align: middle;
 
   &[aria-current="true"] {
     color: $primary;
-    font-size: $swiper-navigation-font-size * 1.35;
+    font-size: $swiper-navigation-font-size * 1.2;
     vertical-align: middle;
   }
 }
@@ -39,12 +41,11 @@
 }
 
 .swiper-navigation {
-  position: absolute;
   z-index: $zindex-swiper-navigation;
   display: flex;
   justify-content: space-between;
   width: calc(100% - $grid-gutter-width);
-  bottom: $swiper-navigation-bottom;
+  margin-top: $swiper-navigation-margin-top * 7;
 }
 
 .swiper-buttons {
@@ -92,4 +93,46 @@
 .swiper-navigation-title {
   margin: 0;
   color: $dark;
+}
+
+@include media-breakpoint-down(lg) {
+  .swiper-pagination {
+    justify-content: flex-start;
+  }
+
+  .swiper-pagination-bullet {
+    margin-right: $spacer;
+    margin-bottom: $spacer * 0.5;
+  }
+
+  .swiper-navigation {
+    margin-top: $swiper-navigation-margin-top * 5;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .swiper {
+    padding-bottom: 0 !important;
+  }
+
+  .swiper-image {
+    height: $swiper-height * 0.4;
+  }
+
+  .swiper-navigation {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: end;
+    margin-top: $swiper-navigation-margin-top * 3.6;
+  }
+
+  .swiper-navigation-title {
+    display: none;
+  }
+
+  .swiper-pagination-horizontal {
+    display: none;
+  }
 }
