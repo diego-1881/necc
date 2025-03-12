@@ -11,17 +11,36 @@
     <nav id="topNav" class="navbar navbar-expand-lg navbar-dark fixed-top bg-secondary" aria-label="Main Navbar"></nav>
 
     <main>
-      <section class="py-5 bg-secondary bg-opacity-20">
+      <section class="py-4 py-lg-5 bg-secondary bg-opacity-20">
         <div class="container py-3">
           <h2 class="text-primary mb-0 horizontal-rule">News</h2>
 
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <ul class="news-filters list-unstyled d-flex mb-0">
+          <div class="d-flex justify-content-between align-items-center mb-lg-4">
+            <ul class="news-filters list-unstyled d-none d-md-flex mb-0">
               <li class="me-4 pe-2 fs-6"><a href="#" class="active" data-filter="all">All</a></li>
               <li class="me-4 pe-2 fs-6"><a href="#" data-filter="insight">Insight</a></li>
               <li class="me-4 pe-2 fs-6"><a href="#" data-filter="in-the-media">In the Media</a></li>
               <li class="me-4 pe-2 fs-6"><a href="#" data-filter="necc">NECC</a></li>
             </ul>
+
+            <div class="dropdown d-md-none">
+              <button
+                class="btn btn-outline-primary dropdown-toggle py-1 px-3 fs-6"
+                type="button"
+                id="dropdownSort"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Filter by
+              </button>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownSort">
+                <li><a href="#" class="dropdown-item active" data-filter="all">All</a></li>
+                <li><a href="#" class="dropdown-item" data-filter="insight">Insight</a></li>
+                <li><a href="#" class="dropdown-item" data-filter="in-the-media">In the Media</a></li>
+                <li><a href="#" class="dropdown-item" data-filter="necc">NECC</a></li>
+              </ul>
+            </div>
 
             <div class="search-container">
               <input type="search" class="form-control form-control-search bg-transparent" placeholder="Search" />
@@ -31,8 +50,8 @@
             </div>
           </div>
 
-          <div class="row row-cols-1 row-cols-lg-3">
-            <article class="col news fade show my-4 py-2" data-category="necc">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <article class="col news fade show my-4 py-lg-2" data-category="necc">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-1.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -49,7 +68,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="necc">
+            <article class="col news fade show my-4 py-lg-2" data-category="necc">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-2.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -66,7 +85,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="insight">
+            <article class="col news fade show my-4 py-lg-2" data-category="insight">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-3.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -81,7 +100,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="in-the-media">
+            <article class="col news fade show my-4 py-lg-2" data-category="in-the-media">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-4.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -98,7 +117,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="insight">
+            <article class="col news fade show my-4 py-lg-2" data-category="insight">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-5.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -115,7 +134,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="insight">
+            <article class="col news fade show my-4 py-lg-2" data-category="insight">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-6.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -132,7 +151,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="necc">
+            <article class="col news fade show my-4 py-lg-2" data-category="necc">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-7.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -149,7 +168,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="necc">
+            <article class="col news fade show my-4 py-lg-2" data-category="necc">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-8.jpg')"></a>
 
               <div class="position-relative pt-4">
@@ -166,7 +185,7 @@
               <!-- .position-relative -->
             </article>
 
-            <article class="col news fade show my-4 py-2" data-category="necc">
+            <article class="col news fade show my-4 py-lg-2" data-category="necc">
               <a href="./news-single.html" class="news-header-image mb-3 pb-1" style="background-image: url('./img/news/image-9.jpg')"></a>
 
               <div class="position-relative pt-4">
