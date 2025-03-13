@@ -10,16 +10,32 @@
   font-weight: $nav-link-font-weight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: none;
+  }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(lg) {
   .nav-link {
     border-bottom: $border-width solid $nav-border-color;
     padding: $nav-link-padding-y * 1.7 $nav-link-padding-x;
   }
 
+  .dropend {
+    .dropdown-menu {
+      padding: 0;
+
+      .nav-link {
+        padding: $nav-link-padding-y * 1.7 $nav-link-padding-x * 2;
+      }
+    }
+  }
+
   .nav-item {
-    &:last-child {
+    &:last-child,
+    li:last-child {
       .nav-link {
         border-bottom: 0;
       }
