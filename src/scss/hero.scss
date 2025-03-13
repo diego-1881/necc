@@ -1,0 +1,90 @@
+.hero {
+  &.hero-single-page {
+    margin-top: 5.5rem;
+    height: $cover-single-page-height;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .bg-secondary {
+      --bs-bg-opacity: 0.35;
+    }
+
+    h1 {
+      width: 100%;
+    }
+  }
+
+  &.hero-video {
+    video {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    > div {
+      --bs-bg-opacity: 0.3;
+    }
+  }
+}
+
+body {
+  &:not(:has(.hero)) {
+    margin-top: 5.5rem;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .hero {
+    &.hero-single-page {
+      height: 11rem;
+      margin-top: 4.4rem;
+
+      .bg-secondary {
+        --bs-bg-opacity: 0.6;
+      }
+
+      .h3 {
+        @include heading-style(2.7, 0.7);
+      }
+    }
+
+    &.hero-video {
+      height: 28rem;
+      margin-top: 4.4rem;
+
+      h1 {
+        @include heading-style(1.6, 0.8);
+      }
+    }
+  }
+
+  body {
+    &:not(:has(.hero)) {
+      margin-top: 4.4rem;
+
+      main {
+        section:first-child {
+          padding-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .hero {
+    &.hero-single-page {
+      .h3 {
+        @include heading-style(2, 0.7);
+      }
+    }
+
+    &.hero-video {
+      height: 16rem;
+
+      > div {
+        --bs-bg-opacity: 0.6;
+      }
+    }
+  }
+}
