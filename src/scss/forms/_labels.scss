@@ -1,0 +1,13 @@
+//
+// Labels
+//
+
+.form-label,
+.gform_wrapper.gravity-theme label.gfield_label,
+.gform_wrapper.gravity-theme legend.gfield_label {
+  margin-bottom: $form-label-margin-bottom;
+  @include font-size($form-label-font-size);
+  font-style: $form-label-font-style;
+  font-weight: $form-label-font-weight;
+  color: $form-label-color;
+}
