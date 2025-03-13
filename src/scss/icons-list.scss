@@ -1,0 +1,24 @@
+.icons-list {
+  .col {
+    margin-bottom: $spacer * 3.5;
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .icons-list {
+    margin-top: $spacer;
+
+    .col {
+      margin-bottom: $spacer * 2.5;
+
+      &:nth-last-child(2) {
+        margin-bottom: $spacer * 2.5;
+      }
+    }
+  }
+}
