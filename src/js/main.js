@@ -98,7 +98,7 @@ function handleSearchContract(searchContainer, searchInput) {
   searchInput.classList.remove("form-control-search-expanded");
 }
 
-// Functions for the HTML mockup only
+// Load HTML parts for mockup
 async function loadHTMLParts(elementId, url) {
   const container = document.getElementById(elementId);
   const response = await fetch(url);
@@ -106,6 +106,7 @@ async function loadHTMLParts(elementId, url) {
   container.innerHTML = html;
 }
 
+// Navbar dropend click
 function handleNavbarDropdowns() {
   const navbarDropdowns = document.querySelectorAll("#mainNavbar .dropend > .dropdown-item");
 
