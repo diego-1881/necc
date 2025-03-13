@@ -125,6 +125,21 @@ section {
   }
 }
 
+img {
+  &.alignright,
+  &.alignleft {
+    width: auto !important;
+    max-width: 50%;
+    float: right;
+    margin-left: $paragraph-margin-bottom / 2;
+    margin-bottom: $paragraph-margin-bottom / 2;
+  }
+
+  &.alignleft {
+    float: left;
+  }
+}
+
 // Global responsive
 @include media-breakpoint-down(xxl) {
   // Home
@@ -186,12 +201,6 @@ section {
     }
   }
 
-  .the-content {
-    .order-1 {
-      margin-bottom: $spacer * 1.5;
-    }
-  }
-
   // WordPress
   .admin-bar {
     .navbar {
@@ -204,5 +213,15 @@ section {
   // Home
   .programs-section {
     display: none;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  img {
+    &.alignright,
+    &.alignleft {
+      max-width: 100%;
+      margin-bottom: $paragraph-margin-bottom;
+    }
   }
 }
