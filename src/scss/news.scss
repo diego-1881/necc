@@ -42,3 +42,41 @@
     }
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .news {
+    .news-header-image {
+      height: 14rem;
+    }
+  }
+
+  .news-single {
+    .news-single-header-image {
+      height: 10.5rem;
+    }
+  }
+
+  .news-feed {
+    .news {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .news {
+    .news-header-image {
+      height: 15rem;
+    }
+  }
+
+  .news-feed {
+    .news {
+      &:last-child {
+        display: flex;
+      }
+    }
+  }
+}

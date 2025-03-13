@@ -55,3 +55,15 @@
     box-shadow: none;
   }
 }
+
+@include media-breakpoint-down(md) {
+  .search-container {
+    width: 100%;
+  }
+
+  .form-control-search {
+    &.form-control-search-expanded {
+      width: 100%;
+    }
+  }
+}

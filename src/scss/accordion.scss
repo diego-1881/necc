@@ -43,7 +43,7 @@
 }
 
 .accordion-body {
-  padding: var(--#{$prefix}accordion-body-padding-y) calc(var(--#{$prefix}accordion-body-padding-x) * 0.8) calc(var(--#{$prefix}accordion-body-padding-y) * 3.7)
+  padding: var(--#{$prefix}accordion-body-padding-y) calc(var(--#{$prefix}accordion-body-padding-x) * 0.8) calc(var(--#{$prefix}accordion-body-padding-y) * 7)
     var(--#{$prefix}accordion-body-padding-x);
 }
 
@@ -51,11 +51,11 @@
   .accordion-button {
     font-size: $font-size-base * 1.25;
     padding-left: 0;
-    padding-right: calc(var(--#{$prefix}accordion-body-padding-x) * 0.1);
+    padding-right: calc(var(--#{$prefix}accordion-body-padding-x) * 0.05);
   }
 
   .accordion-body {
-    padding: var(--#{$prefix}accordion-body-padding-y) calc(var(--#{$prefix}accordion-body-padding-x) * 0.5)
-      calc(var(--#{$prefix}accordion-body-padding-y) * 3.7) calc(var(--#{$prefix}accordion-body-padding-x) * 0.5);
+    padding: var(--#{$prefix}accordion-body-padding-y) calc(var(--#{$prefix}accordion-body-padding-x) * 0.35)
+      calc(var(--#{$prefix}accordion-body-padding-y) * 3.7) calc(var(--#{$prefix}accordion-body-padding-x) * 0.35);
   }
 }

@@ -21,4 +21,42 @@
       }
     }
   }
+
+  &.card-team-no-description {
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card {
+    &.card-team {
+      &.card-team-sm {
+        .card-img {
+          height: $card-team-height * 0.7;
+        }
+      }
+    }
+
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: 374.98px) {
+  .card {
+    &.card-team {
+      &.card-team-sm {
+        .card-img {
+          height: $card-team-height * 0.48;
+        }
+      }
+    }
+  }
 }

@@ -35,6 +35,7 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  margin-right: $spacer * 0.4;
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
@@ -210,4 +211,15 @@
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+@include media-breakpoint-down(xl) {
+  .btn {
+    margin-right: $spacer * 0.3;
+    margin-bottom: $spacer * 0.5;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
