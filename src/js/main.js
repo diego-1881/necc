@@ -118,12 +118,21 @@ function handleNavbarDropdowns() {
   });
 }
 
+// Notification bar
+function closeNotificationBar(notificationBar, closeNotificationBarBtn) {
+  closeNotificationBarBtn.addEventListener("click", function () {
+    notificationBar.remove();
+  });
+}
+
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
     const searchIcon = document.querySelector(".search-icon");
     const searchContainer = document.querySelector(".search-container");
     const searchInput = document.querySelector(".form-control-search");
     const searchClose = document.querySelector(".search-close");
+    const notificationBar = document.getElementById("notificationBar");
+    const closeNotificationBarBtn = document.getElementById("closeNotificationBarBtn");
 
     if (searchIcon) {
       handleSearchIconClick(searchIcon, searchContainer, searchInput);
@@ -135,6 +144,7 @@ function init() {
     await loadHTMLParts("footer", "footer.html");
     await loadHTMLParts("topNav", "nav.html");
     handleNavbarDropdowns();
+    notificationBar && closeNotificationBar(notificationBar, closeNotificationBarBtn);
   });
 }
 init();

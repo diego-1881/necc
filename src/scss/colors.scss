@@ -10,6 +10,7 @@ $black: #000;
 // scss-docs-start color-variables
 $blue: #0769d2;
 $cyan: #70badd;
+$green: #9eb956;
 $cyan-100: #e3f8ff;
 $pink: #e41458;
 
@@ -21,6 +22,7 @@ $colors: (
   "cyan": $cyan,
   "black": $black,
   "white": $white,
+  "green": $green,
 );
 // scss-docs-end colors-map
 
@@ -30,6 +32,7 @@ $secondary: $cyan;
 $light: $white;
 $dark: $gray-800;
 $pink: $pink;
+$success: $green;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -39,5 +42,6 @@ $theme-colors: (
   "pink": $pink,
   "light": $light,
   "dark": $dark,
+  "success": $green,
 );
 // scss-docs-end theme-colors-map
