@@ -74,7 +74,9 @@
 
   .news-feed {
     .news {
-      &:last-child {
+      display: none;
+
+      &:first-child {
         display: flex;
       }
     }
