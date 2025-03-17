@@ -1,0 +1,120 @@
+.gform_title {
+  display: none;
+}
+
+.gform_fields {
+  display: grid;
+  grid-column-gap: $gform-margin-x * 2;
+  -ms-grid-columns: (1fr 2%) [12];
+  grid-row-gap: $gform-margin-y * 1.5;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(auto-fill, auto);
+  width: 100%;
+}
+
+.gfield {
+  grid-column: 1/-1;
+  min-width: 0;
+
+  input,
+  select {
+    &.medium {
+      width: calc(50% - 16px / 2);
+    }
+  }
+}
+
+.ginput_complex {
+  display: flex;
+  flex-flow: row wrap;
+  grid-row-gap: $gform-margin-y * 1.5;
+
+  .ginput_full {
+    flex: 0 0 100%;
+  }
+
+  p,
+  span {
+    flex: 1;
+  }
+
+  label {
+    font-size: $gform-small-font-size;
+  }
+
+  &:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) {
+    padding-right: $gform-margin-x;
+  }
+
+  &:not(.ginput_container_address) span:not([style*="display:none"]):not(.ginput_full) ~ span:not(.ginput_full) {
+    padding-left: $gform-margin-x;
+  }
+}
+
+.ginput_container_address {
+  margin-left: -$gform-margin-x;
+  margin-right: -$gform-margin-x;
+
+  span {
+    flex: 0 0 50%;
+    padding-left: 0.9804%;
+    padding-right: 0.9804%;
+  }
+}
+
+.gfield_label {
+  display: inline-block;
+}
+
+.gfield_required {
+  color: $danger;
+  display: inline-block;
+  font-size: $gform-small-font-size;
+  padding-inline-start: $spacer * 0.1;
+}
+
+.gform_required_legend {
+  font-size: $font-size-base;
+  padding-bottom: $gform-margin-y;
+
+  .gfield_required {
+    padding-inline-start: 0;
+  }
+}
+
+.gfield_validation_message,
+.validation_message {
+  color: $danger;
+  font-size: $gform-small-font-size;
+}
+
+.gform_submission_error {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base * 1.2;
+  color: $danger;
+}
+
+.gform_validation_container,
+.gform_body .gform_fields .gfield.gform_validation_container,
+.gform_fields .gfield.gform_validation_container,
+.gform_validation_container {
+  display: none !important;
+  left: -9000px;
+  position: absolute !important;
+}
+
+.gform-footer {
+  .button[type="submit"] {
+    width: auto;
+    padding: $btn-padding-y $btn-padding-x;
+    background-color: $primary;
+    color: $light;
+    border: none;
+    border-radius: $btn-border-radius;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}

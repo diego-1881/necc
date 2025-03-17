@@ -1,0 +1,289 @@
+.gravity-theme.ui-datepicker {
+  background: #fff;
+  border: 1px solid #d0d1d3;
+  border-radius: 3px;
+  box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.11), 0 0 0.25rem rgba(18, 25, 97, 0.0405344);
+  color: #607382;
+  font-size: 0.8125rem;
+  font-weight: $gform-font-weight-medium;
+  margin-top: 5px;
+  max-width: 400px;
+  padding: 18px 15px;
+  width: auto;
+}
+
+.gravity-theme.ui-datepicker table,
+.gravity-theme.ui-datepicker td,
+.gravity-theme.ui-datepicker th,
+.gravity-theme.ui-datepicker thead,
+.gravity-theme.ui-datepicker tr {
+  background: 0 0;
+  border: 0;
+  margin: 0;
+}
+
+.gravity-theme.ui-datepicker td,
+.gravity-theme.ui-datepicker th {
+  padding: 5px;
+  text-shadow: none;
+  text-transform: none;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0 5px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  color: #607382;
+  cursor: pointer;
+  display: flex;
+  font-family: gform-icons-theme !important;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  speak: never;
+  text-decoration: none;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  width: 30px;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover {
+  color: #2f4054;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon {
+  display: none;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next::before,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev::before {
+  border: 0;
+  height: auto;
+  position: static;
+  transform: none;
+  width: auto;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  left: 0;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  right: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+    left: -12px;
+  }
+
+  .gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+    right: -12px;
+  }
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header select {
+  @include icon-caret-down(116fd4);
+  -webkit-appearance: none;
+  background-color: transparent;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #585e6a;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: $gform-font-weight-medium;
+  height: auto;
+  min-height: 0;
+  padding: 0 22px 0 0;
+  width: auto;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-next,
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  @include icon-caret-down(116fd4);
+  background-size: 12px;
+  transform: rotate(-90deg);
+  top: -6.5px;
+
+  &:before {
+    display: block;
+    content: "";
+  }
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  transform: rotate(90deg);
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-header select.ui-datepicker-month {
+  margin-right: 20px;
+  -moz-text-align-last: right;
+  text-align-last: right;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar a,
+.gravity-theme.ui-datepicker .ui-datepicker-calendar span {
+  font-weight: $gform-font-weight-normal;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar th span {
+  align-items: center;
+  color: #2f4054;
+  display: flex;
+  font-size: 0.8125rem;
+  font-weight: $gform-font-weight-medium;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar td {
+  font-size: 0.8125rem;
+  height: 50px;
+  width: 50px;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-default {
+  align-items: center;
+  background: 0 0;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  box-shadow: none;
+  color: #2f4054;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  width: 40px;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-default:focus,
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-default:hover {
+  background: 0 0;
+  border-color: #607382;
+  outline: 0;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-default:active {
+  background: #f2f3f5;
+  border-color: #607382;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default {
+  background: #607382;
+  border-color: #607382;
+  box-shadow: 0 0.125rem 0.125rem rgba(58, 58, 87, 0.0596411);
+  color: #fff;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default:focus,
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default:hover {
+  border-color: #607382;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-disabled {
+  background: 0 0;
+}
+
+.gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-disabled .ui-state-default {
+  align-items: center;
+  background: #f2f3f5;
+  border: 1px solid rgba(32, 32, 46, 0.079);
+  border-radius: 100%;
+  box-shadow: 0 0.125rem 0.125rem rgba(58, 58, 87, 0.0596411);
+  color: #686e77;
+  cursor: text;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  text-decoration: none;
+  width: 40px;
+}
+
+@media (max-width: 640px) {
+  .gravity-theme.ui-datepicker {
+    max-width: 235px;
+  }
+
+  .gravity-theme.ui-datepicker .ui-datepicker-header {
+    margin-bottom: 10px;
+  }
+
+  .gravity-theme.ui-datepicker td,
+  .gravity-theme.ui-datepicker th {
+    padding: 3px;
+  }
+
+  .gravity-theme.ui-datepicker .ui-datepicker-calendar th span {
+    height: 20px;
+    width: 20px;
+  }
+
+  .gravity-theme.ui-datepicker .ui-datepicker-calendar td {
+    height: 30px;
+    width: 30px;
+  }
+
+  .gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-default {
+    height: 20px;
+    width: 20px;
+  }
+
+  .gravity-theme.ui-datepicker .ui-datepicker-calendar .ui-state-disabled .ui-state-default {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+html[dir="rtl"] #ui-datepicker-div.gform-theme-datepicker[style] {
+  right: auto !important;
+}
+
+.gform_wrapper.gravity-theme .ginput_container_date .datepicker_with_icon.large {
+  width: calc(100% - 48px);
+}
+
+.gform_wrapper.gravity-theme .ginput_container_date img.ui-datepicker-trigger {
+  display: block;
+  margin-left: 12.8px;
+  max-height: 25.6px;
+  max-width: 25.6px;
+}
+
+html[dir="rtl"] .gform_wrapper.gravity-theme .ginput_container_date img.ui-datepicker-trigger {
+  margin-left: 0;
+  margin-right: 12.8px;
+  order: 1;
+}

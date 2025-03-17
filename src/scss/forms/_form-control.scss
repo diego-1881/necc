@@ -3,7 +3,7 @@
 //
 
 .form-control,
-.gform_wrapper input,
+.gform_wrapper input:not([type="checkbox"]),
 .gform_wrapper textarea {
   display: block;
   width: 100%;
