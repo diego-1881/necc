@@ -21,6 +21,12 @@ section {
   }
 }
 
+footer {
+  background: $dark;
+  position: relative;
+  z-index: -1;
+}
+
 // Type
 .horizontal-rule {
   display: flex;
@@ -93,6 +99,10 @@ section {
     top: 13.6rem;
     left: -1rem;
   }
+}
+
+#instagramFeed {
+  height: 57rem;
 }
 
 // WordPress
