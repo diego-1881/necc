@@ -1,5 +1,37 @@
 import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
+import {
+  gsap,
+  CustomEase,
+  RoughEase,
+  ExpoScaleEase,
+  SlowMo,
+  Flip,
+  ScrollTrigger,
+  Observer,
+  ScrollToPlugin,
+  Draggable,
+  MotionPathPlugin,
+  EaselPlugin,
+  PixiPlugin,
+  TextPlugin,
+} from "gsap/all";
+
+gsap.registerPlugin(
+  Flip,
+  ScrollTrigger,
+  Observer,
+  ScrollToPlugin,
+  Draggable,
+  MotionPathPlugin,
+  EaselPlugin,
+  PixiPlugin,
+  TextPlugin,
+  RoughEase,
+  ExpoScaleEase,
+  SlowMo,
+  CustomEase
+);
 
 // Our leadership team
 // Disable the cards that are not selected
