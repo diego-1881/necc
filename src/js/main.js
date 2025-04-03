@@ -1,37 +1,5 @@
 import "../scss/styles.scss";
 import * as bootstrap from "bootstrap";
-import {
-  gsap,
-  CustomEase,
-  RoughEase,
-  ExpoScaleEase,
-  SlowMo,
-  Flip,
-  ScrollTrigger,
-  Observer,
-  ScrollToPlugin,
-  Draggable,
-  MotionPathPlugin,
-  EaselPlugin,
-  PixiPlugin,
-  TextPlugin,
-} from "gsap/all";
-
-gsap.registerPlugin(
-  Flip,
-  ScrollTrigger,
-  Observer,
-  ScrollToPlugin,
-  Draggable,
-  MotionPathPlugin,
-  EaselPlugin,
-  PixiPlugin,
-  TextPlugin,
-  RoughEase,
-  ExpoScaleEase,
-  SlowMo,
-  CustomEase
-);
 
 // Our leadership team
 // Disable the cards that are not selected
@@ -157,6 +125,80 @@ function closeNotificationBar(notificationBar, closeNotificationBarBtn) {
   });
 }
 
+// Animation
+function initializeAnimationsIfAllowed() {
+  const isAnimationOk = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+
+  if (isAnimationOk) {
+    animateVisibility();
+    animatePageTitle();
+    animateInstagramFeed();
+    adjustFooterSpacer();
+    animateFooterReveal();
+
+    window.addEventListener("scroll", animateVisibility);
+    window.addEventListener("resize", animateVisibility);
+    window.addEventListener("scroll", animateInstagramFeed);
+    window.addEventListener("scroll", adjustFooterSpacer);
+  }
+}
+
+function animateVisibility() {
+  const elements = document.querySelectorAll(
+    "section h2, section h3, section h4, section h5, section h6, section p:not(:has(img)), section ul, .icons-list img, .icons-list ul, .footer-container, .animation-mask"
+  );
+
+  elements.forEach((elem) => {
+    const rect = elem.getBoundingClientRect();
+    const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+    if (isVisible) {
+      elem.classList.add("is-visible");
+    }
+  });
+}
+
+function animatePageTitle() {
+  const pageTitle = document.querySelector(".hero h1");
+  pageTitle?.classList.add("is-visible");
+}
+
+function animateInstagramFeed() {
+  const instagramFeedItems = document.querySelectorAll("#instagramFeed div[data-speed]");
+  const scrollY = window.scrollY;
+
+  if (!instagramFeedItems.length) return;
+
+  instagramFeedItems.forEach((el) => {
+    const speed = parseFloat(el.getAttribute("data-speed"));
+    const translateY = (1 - speed) * scrollY;
+    el.style.transform = `translateY(${translateY}px)`;
+  });
+}
+
+function adjustFooterSpacer() {
+  const footer = document.querySelector(".footer-container");
+  const footerSpacer = document.querySelector(".footer-spacer");
+
+  if (!footer || !footerSpacer) return;
+
+  const footerHeight = footer.offsetHeight;
+
+  footerSpacer.style.height = `${footerHeight * 2}px`;
+  footerSpacer.style.marginTop = `-${footerHeight}px`;
+  footer.style.top = `calc(100vh - ${footerHeight}px)`;
+}
+
+function animateFooterReveal() {
+  let footer = document.querySelector(".footer-container");
+  const rect = footer.getBoundingClientRect();
+  const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+  if (isVisible) {
+    footer.classList.add("is-visible");
+  }
+}
+
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
     const searchIcon = document.querySelector(".search-icon");
@@ -176,6 +218,7 @@ function init() {
     await loadHTMLParts("footer", "footer.html");
     await loadHTMLParts("topNav", "nav.html");
     handleNavbarDropdowns();
+    initializeAnimationsIfAllowed();
     notificationBar && closeNotificationBar(notificationBar, closeNotificationBarBtn);
   });
 }

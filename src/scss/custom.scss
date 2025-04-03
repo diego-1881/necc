@@ -45,7 +45,7 @@ footer {
 // Home
 .necc-programs-graph-container {
   position: relative;
-  height: 27rem;
+  height: 25.5rem;
   transform: scale(0.95);
 }
 
@@ -71,38 +71,33 @@ footer {
   width: max-content;
 
   &.graph-title-1 {
-    top: 2.5rem;
-    left: 3.5rem;
+    top: 3.3rem;
+    left: 3.4rem;
   }
 
   &.graph-title-2 {
-    top: -0.2rem;
-    left: 35.8rem;
+    top: -0.5rem;
+    left: 35.4rem;
   }
 
   &.graph-title-3 {
     top: 9.5rem;
-    left: 44.2rem;
+    left: 43.8rem;
   }
 
   &.graph-title-4 {
     top: 19.2rem;
-    left: 35.8rem;
+    left: 35.3rem;
   }
 
   &.graph-title-5 {
-    top: 22.2rem;
-    left: 12.6rem;
-  }
-
-  &.graph-title-6 {
-    top: 13.6rem;
+    top: 13rem;
     left: -1rem;
   }
 }
 
 #instagramFeed {
-  height: 57rem;
+  height: 53rem;
 }
 
 // WordPress
@@ -184,6 +179,14 @@ img {
   .necc-programs-graph-titles,
   .necc-programs-graph {
     left: -4rem;
+  }
+
+  #instagramFeed {
+    height: auto;
+
+    h4 {
+      padding-bottom: $spacer * 2;
+    }
   }
 }
 

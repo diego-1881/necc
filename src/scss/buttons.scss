@@ -46,6 +46,7 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
     border-color: var(--#{$prefix}btn-hover-border-color);
+    animation: headshake 0.5s ease-in-out;
   }
 
   .btn-check + &:hover {
