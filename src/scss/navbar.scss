@@ -36,8 +36,15 @@
 // Used for brand, project, or site names.
 .navbar-brand {
   .navbar-brand-logo-on-scroll {
+    width: 2.5rem;
+    height: auto;
     display: none;
   }
+}
+
+.navbar-brand-logo-main {
+  width: 13.75rem;
+  height: auto;
 }
 
 @include media-breakpoint-down(lg) {

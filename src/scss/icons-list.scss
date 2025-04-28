@@ -6,6 +6,12 @@
     &:nth-last-child(2) {
       margin-bottom: 0;
     }
+
+    img {
+      max-width: 2rem;
+      max-height: 2rem;
+      border-radius: 0;
+    }
   }
 }
 
