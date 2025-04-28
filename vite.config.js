@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
+import purgecss from "vite-plugin-purgecss";
 
 export default defineConfig({
   root: resolve(__dirname, "src"),
@@ -33,6 +34,15 @@ export default defineConfig({
       ],
     },
   },
+  plugins: [
+    purgecss({
+      content: [
+        "./src/**/*.html",
+        "./src/**/*.js",
+        "./src/**/*.scss",
+      ],
+    }),
+  ],
   server: {
     port: 8090,
     hot: true,
