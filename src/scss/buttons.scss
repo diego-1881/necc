@@ -35,7 +35,6 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  margin-right: $spacer * 0.4;
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
@@ -121,6 +120,15 @@
     border-color: var(--#{$prefix}btn-disabled-border-color);
     opacity: var(--#{$prefix}btn-disabled-opacity);
     @include box-shadow(none);
+  }
+
+  + .btn {
+    margin-bottom: $spacer * 0.5;
+  }
+
+  &:has(+ .btn) {
+    margin-bottom: $spacer * 0.5;
+    margin-right: $spacer * 0.3;
   }
 }
 
