@@ -1,6 +1,4 @@
 import Swiper from "swiper/bundle";
-import "swiper/css";
-import "swiper/css/navigation";
 
 // Swiper 11.2.1
 function swiperSlider() {

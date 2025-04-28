@@ -1,5 +1,6 @@
 import "../scss/styles.scss";
-import * as bootstrap from "bootstrap";
+import Dropdown from "bootstrap/js/dist/dropdown";
+import Collapse from "bootstrap/js/dist/Collapse";
 
 // Our leadership team
 // Disable the cards that are not selected
