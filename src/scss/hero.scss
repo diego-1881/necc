@@ -16,6 +16,8 @@
   }
 
   &.hero-video {
+    z-index: 2;
+
     video {
       height: 100%;
       object-fit: cover;
