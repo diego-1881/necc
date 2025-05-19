@@ -2,6 +2,13 @@
   width: 100%;
 }
 
+.swiper-slide{
+  &:has(img){
+    text-align: center;
+    align-self: center;
+  }
+}
+
 .swiper-pagination {
   display: flex;
   flex-wrap: wrap;
@@ -28,6 +35,14 @@
     color: $primary;
     font-size: $swiper-navigation-font-size * 1.2;
     vertical-align: middle;
+  }
+}
+
+.text-white {
+  .swiper-pagination-bullet {
+    &[aria-current="true"] {
+      color: $white;
+    }
   }
 }
 
@@ -92,7 +107,6 @@
 
 .swiper-navigation-title {
   margin: 0;
-  color: $dark;
 }
 
 @include media-breakpoint-down(lg) {
