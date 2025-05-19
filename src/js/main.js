@@ -1,6 +1,7 @@
 import "../scss/styles.scss";
 import Dropdown from "bootstrap/js/dist/dropdown";
 import Collapse from "bootstrap/js/dist/Collapse";
+import { main } from "@popperjs/core";
 
 // Our leadership team
 // Disable the cards that are not selected
@@ -200,6 +201,19 @@ function animateFooterReveal() {
   }
 }
 
+function reorderTeamCards() {
+  const teamCards = document.querySelectorAll(".team-accordion .container .col");
+
+  teamCards.forEach((card) => {
+    const mainContainer = card.closest(".team-accordion")?.querySelector(".team-accordion-container .row");
+    mainContainer?.appendChild(card);
+  });
+}
+
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
     const searchIcon = document.querySelector(".search-icon");
@@ -212,6 +226,9 @@ function init() {
     if (searchIcon) {
       handleSearchIconClick(searchIcon, searchContainer, searchInput);
       handleSearchCloseClick(searchClose, searchContainer, searchInput);
+    }
+    if (isMobile()) {
+      reorderTeamCards();
     }
     disableUnselectedCards();
     filterNewsByCategory(searchIcon, searchContainer, searchInput);

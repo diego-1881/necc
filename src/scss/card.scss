@@ -35,6 +35,12 @@
 @include media-breakpoint-down(md) {
   .card {
     &.card-team {
+      pointer-events: none;
+
+      .card-img {
+        height: $card-team-height * 0.7;
+      }
+
       &.card-team-sm {
         .card-img {
           height: $card-team-height * 0.7;
@@ -52,6 +58,10 @@
 @media (max-width: 374.98px) {
   .card {
     &.card-team {
+      .card-img {
+        height: $card-team-height * 0.48;
+      }
+
       &.card-team-sm {
         .card-img {
           height: $card-team-height * 0.48;
