@@ -1,0 +1,67 @@
+// scss-docs-start caret-mixins
+@mixin caret-down($width: $caret-width) {
+  @include icon-caret-down(116fd4);
+}
+
+@mixin caret-up($width: $caret-width) {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+@mixin caret-end($width: $caret-width) {
+  border-top: $width solid transparent;
+  border-right: 0;
+  border-bottom: $width solid transparent;
+  border-left: $width solid;
+}
+
+@mixin caret-start($width: $caret-width) {
+  border-top: $width solid transparent;
+  border-right: $width solid;
+  border-bottom: $width solid transparent;
+}
+
+@mixin caret($direction: down, $width: $caret-width, $spacing: $caret-spacing, $vertical-align: $caret-vertical-align) {
+  @if $enable-caret {
+    &::after {
+      display: inline-flex;
+      border: 0;
+      width: $spacer * 0.65;
+      height: $spacer * 0.65;
+      vertical-align: middle;
+      margin-left: $spacer * 0.3;
+
+      content: "";
+      @if $direction == down {
+        @include caret-down($width);
+      } @else if $direction == up {
+        body {
+          display: none;
+        }
+        @include caret-up($width);
+      } @else if $direction == end {
+        @include caret-end($width);
+      }
+    }
+
+    @if $direction == start {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $spacing;
+        vertical-align: $vertical-align;
+        content: "";
+        @include caret-start($width);
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}
+// scss-docs-end caret-mixins

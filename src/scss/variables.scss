@@ -152,7 +152,10 @@ $btn-border-radius: var(--#{$prefix}border-radius-pill);
 // Dropdown menu container and contents.
 
 // scss-docs-start dropdown-variables
-$dropdown-box-shadow: var(--#{$prefix}box-shadow);
+$dropdown-box-shadow: $box-shadow;
+$dropdown-link-hover-bg: $cyan-25;
+$dropdown-link-active-bg: $secondary;
+$dropdown-item-padding-y: $spacer * 0.5;
 // scss-docs-end dropdown-variables
 
 // Navs

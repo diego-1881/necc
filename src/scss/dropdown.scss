@@ -1,0 +1,22 @@
+// The dropdown wrapper (`<div>`)
+.dropdown-toggle {
+  @include caret();
+
+  &.btn-outline-primary {
+    &[aria-expanded="true"] {
+      &::after {
+        @include icon-caret-down(ffffff);
+      }
+    }
+  }
+}
+
+// The dropdown menu
+.dropdown-menu {
+  --#{$prefix}dropdown-box-shadow: #{$dropdown-box-shadow};
+  --#{$prefix}dropdown-link-hover-bg: #{$dropdown-link-hover-bg};
+  --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
+
+  border: none;
+  @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
+}
