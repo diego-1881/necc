@@ -39,8 +39,7 @@ $news-home-image-height: (
       text-decoration: none;
 
       &.active {
-        font-weight: $font-weight-medium;
-        text-decoration: underline;
+        font-weight: $font-weight-semibold;
       }
     }
   }

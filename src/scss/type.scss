@@ -12,9 +12,8 @@
 @include font-face("Sabon LT Std", "../fonts/SabonLTStd-Bold.woff2", bold);
 
 @include font-face("Whitney", "../fonts/Whitney-Book.woff2");
-@include font-face("Whitney", "../fonts/Whitney-Bold.woff2", bold);
-@include font-face("Whitney", "../fonts/Whitney-Medium.woff2", 500);
 @include font-face("Whitney", "../fonts/Whitney-Semibold.woff2", 600);
+@include font-face("Whitney", "../fonts/Whitney-Bold.woff2", bold);
 
 body {
   font-family: $font-family-sans-serif;
@@ -130,6 +129,10 @@ section {
   p {
     @include heading-sans-serif();
   }
+}
+
+.text-sans-serif {
+  @include heading-sans-serif();
 }
 
 ul {
