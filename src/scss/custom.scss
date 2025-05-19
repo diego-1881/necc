@@ -36,6 +36,7 @@ main {
 footer {
   background: $dark;
   position: relative;
+  z-index: -1;
 }
 
 // Type
@@ -82,28 +83,33 @@ footer {
   width: max-content;
 
   &.graph-title-1 {
-    top: 3.3rem;
-    left: 3.4rem;
+    top: 2.2rem;
+    left: 3.6rem;
   }
 
   &.graph-title-2 {
-    top: -0.5rem;
-    left: 35.4rem;
+    top: -0.7rem;
+    left: 35.8rem;
   }
 
   &.graph-title-3 {
     top: 9.5rem;
-    left: 43.8rem;
+    left: 44.3rem;
   }
 
   &.graph-title-4 {
-    top: 19.2rem;
-    left: 35.3rem;
+    top: 19rem;
+    left: 36rem;
   }
 
   &.graph-title-5 {
-    top: 13rem;
+    top: 11.5rem;
     left: -1rem;
+  }
+
+  &.graph-title-6 {
+    top: 22.2rem;
+    left: 11.8rem;
   }
 }
 
@@ -241,7 +247,8 @@ img {
   }
 
   // Layout
-  .row-cols-md-3 {
+  .row-cols-md-3,
+  .row-cols-md-4 {
     .col {
       margin-bottom: $spacer * 2;
 
@@ -266,18 +273,9 @@ img {
   }
 
   #neccNumbers {
-    .row {
-      .col {
-        h3 {
-          width: 9rem;
-          float: left;
-          margin-top: $spacer * 0.6;
-        }
-
-        p {
-          width: 16rem;
-          float: left;
-        }
+    p {
+      br:not(strong + br) {
+        display: none;
       }
     }
   }
