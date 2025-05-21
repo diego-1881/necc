@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 2;
 
     .bg-secondary {
       --bs-bg-opacity: 0.35;
@@ -39,7 +40,7 @@ body {
   .hero {
     &.hero-single-page {
       height: 11rem;
-      margin-top: 4.4rem;
+      margin-top: 4.45rem;
 
       .bg-secondary {
         --bs-bg-opacity: 0.6;
@@ -52,7 +53,7 @@ body {
 
     &.hero-video {
       height: 28rem;
-      margin-top: 4.4rem;
+      margin-top: 4.45rem;
 
       h1 {
         @include heading-style(1.6, 0.8);
@@ -62,7 +63,7 @@ body {
 
   body {
     &:not(:has(.hero)) {
-      margin-top: 4.4rem;
+      margin-top: 4.45rem;
 
       main {
         section:first-child {

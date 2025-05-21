@@ -51,7 +51,13 @@
   .accordion-button {
     font-size: $font-size-base * 1.25;
     padding-left: 0;
-    padding-right: calc(var(--#{$prefix}accordion-body-padding-x) * 0.05);
+    padding-right: calc(var(--#{$prefix}accordion-body-padding-x) * 0.3);
+
+    // Accordion icon
+    &::after {
+      position: relative;
+      left: 0.9rem;
+    }
   }
 
   .accordion-body {

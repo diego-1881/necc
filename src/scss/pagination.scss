@@ -1,6 +1,11 @@
 .pagination {
   display: flex;
   @include list-unstyled();
+  font-size: $font-size-base * 1.1;
+
+  .page-numbers {
+    padding: 0 $spacer * 0.4;
+  }
 
   .page-number {
     display: inline-block;
