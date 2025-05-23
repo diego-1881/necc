@@ -147,7 +147,7 @@ function initializeAnimationsIfAllowed() {
 
 function animateVisibility() {
   const elements = document.querySelectorAll(
-    "section h2, section h3, section h4, section h5, section h6, section p:not(:has(img)), section ul, .icons-list img, .icons-list ul, .footer-container, .animation-mask"
+    "section h2, section h3, section h4, section h5, section h6, section p:not(:has(img)), section ul, .icons-list img, .icons-list ul, .footer-container, .animation-mask, .necc-programs-item, .necc-programs-graph-title"
   );
 
   elements.forEach((elem) => {

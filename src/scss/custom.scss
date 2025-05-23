@@ -83,6 +83,12 @@ footer {
   font-family: $font-family-serif;
   font-size: $font-size-base * 1.3;
   width: max-content;
+  opacity: 0;
+
+  &.is-visible {
+    transition: all 1s ease-out;
+    opacity: 1;
+  }
 
   &.graph-title-1 {
     top: 2.2rem;
@@ -112,6 +118,23 @@ footer {
   &.graph-title-6 {
     top: 22.2rem;
     left: 11.8rem;
+  }
+}
+
+.necc-programs-line {
+  stroke-dasharray: 1000;
+  transition: stroke-dashoffset 2.5s ease-out;
+
+  &.is-visible {
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+.necc-programs-circle {
+  transition: opacity 2.5s ease;
+
+  &.is-visible {
+    opacity: 1 !important;
   }
 }
 
