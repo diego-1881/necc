@@ -77,25 +77,42 @@ window.addEventListener("scroll", handleScroll);
 handleScroll();
 
 // Search component
-function handleSearchIconClick(searchIcon, searchContainer, searchInput) {
-  searchIcon.addEventListener("click", function () {
-    handleSearchExpand(searchContainer, searchInput);
+function handleSearchIconClick(searchIcons) {
+  searchIcons.forEach((searchIcon) => {
+    const searchContainer = searchIcon.closest(".search-container");
+    const searchInput = searchContainer.querySelector(".form-control-search");
+
+    searchIcon.addEventListener("click", function (e) {
+      const mainNavbar = searchIcon.closest(".navbar-collapse");
+      mainNavbar?.classList.add("d-none");
+
+      handleSearchExpand(searchContainer, searchInput);
+    });
   });
 }
 
-function handleSearchCloseClick(searchClose, searchContainer, searchInput) {
-  searchClose.addEventListener("click", function () {
-    handleSearchContract(searchContainer, searchInput);
+function handleSearchCloseClick(searchClose) {
+  searchClose.forEach((closeButton) => {
+    const searchContainer = closeButton.closest(".search-container");
+    const searchInput = searchContainer.querySelector(".form-control-search");
+
+    closeButton.addEventListener("click", function (e) {
+      const mainNavbar = closeButton.closest(".navbar-collapse");
+      mainNavbar?.classList.remove("d-none");
+
+      handleSearchContract(searchContainer, searchInput, mainNavbar);
+    });
   });
 }
 
-function handleSearchExpand(searchContainer, searchInput) {
+function handleSearchExpand(searchContainer, searchInput, mainNavbar) {
   searchContainer.classList.add("search-container-expanded");
   searchInput.classList.add("form-control-search-expanded");
   searchInput.focus();
 }
 
-function handleSearchContract(searchContainer, searchInput) {
+function handleSearchContract(searchContainer, searchInput, mainNavbar) {
+  mainNavbar?.classList.remove("d-none");
   searchContainer.classList.remove("search-container-expanded");
   searchInput.classList.remove("form-control-search-expanded");
 }
@@ -127,22 +144,34 @@ function closeNotificationBar(notificationBar, closeNotificationBarBtn) {
   });
 }
 
+// Close navbar on click outside
+function closeNavbarOnClickOutside() {
+  const navbarCollapse = document.getElementById("mainNavbar");
+  const navbarToggler = document.querySelector(".navbar-toggler");
+
+  document.addEventListener("click", function (event) {
+    const isNavbarOpen = navbarCollapse.classList.contains("show");
+    if (!isNavbarOpen) return;
+
+    if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+      const bsCollapse = Collapse.getOrCreateInstance(navbarCollapse);
+      bsCollapse.hide();
+    }
+  });
+}
+
 // Animation
-function initializeAnimationsIfAllowed() {
-  const isAnimationOk = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+function initializeAnimations() {
+  animateVisibility();
+  animatePageTitle();
+  animateInstagramFeed();
+  adjustFooterSpacer();
+  animateFooterReveal();
 
-  if (isAnimationOk) {
-    animateVisibility();
-    animatePageTitle();
-    animateInstagramFeed();
-    adjustFooterSpacer();
-    animateFooterReveal();
-
-    window.addEventListener("scroll", animateVisibility);
-    window.addEventListener("resize", animateVisibility);
-    window.addEventListener("scroll", animateInstagramFeed);
-    window.addEventListener("scroll", adjustFooterSpacer);
-  }
+  window.addEventListener("scroll", animateVisibility);
+  window.addEventListener("resize", animateVisibility);
+  window.addEventListener("scroll", animateInstagramFeed);
+  window.addEventListener("scroll", adjustFooterSpacer);
 }
 
 function animateVisibility() {
@@ -216,28 +245,25 @@ function isMobile() {
 
 function init() {
   document.addEventListener("DOMContentLoaded", async () => {
-    const searchIcon = document.querySelector(".search-icon");
-    const searchContainer = document.querySelector(".search-container");
-    const searchInput = document.querySelector(".form-control-search");
-    const searchClose = document.querySelector(".search-close");
+    const searchIcons = document.querySelectorAll(".search-icon");
+    const searchClose = document.querySelectorAll(".search-close");
     const notificationBar = document.getElementById("notificationBar");
     const closeNotificationBarBtn = document.getElementById("closeNotificationBarBtn");
 
-    if (searchIcon) {
-      handleSearchIconClick(searchIcon, searchContainer, searchInput);
-      handleSearchCloseClick(searchClose, searchContainer, searchInput);
-    }
     if (isMobile()) {
       reorderTeamCards();
     }
-    disableUnselectedCards();
-    filterNewsByCategory(searchIcon, searchContainer, searchInput);
 
+    handleSearchIconClick(searchIcons);
+    handleSearchCloseClick(searchClose);
+    disableUnselectedCards();
+    filterNewsByCategory();
     await loadHTMLParts("footer", "footer.html");
     await loadHTMLParts("topNav", "nav.html");
-    handleNavbarDropdowns();
-    initializeAnimationsIfAllowed();
     notificationBar && closeNotificationBar(notificationBar, closeNotificationBarBtn);
+    closeNavbarOnClickOutside();
+    initializeAnimations();
+    handleNavbarDropdowns();
   });
 }
 init();

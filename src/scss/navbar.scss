@@ -40,6 +40,12 @@
     height: auto;
     display: none;
   }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-base;
+  }
 }
 
 .navbar-brand-logo-main {
@@ -69,6 +75,12 @@
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
 .navbar-collapse {
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-base;
+  }
+
   .dropdown-toggle {
     &::after {
       @include icon-caret-down(ffffff);

@@ -30,6 +30,10 @@ $news-home-image-height: (
     background-repeat: no-repeat;
     background-position: center;
     border-radius: $border-radius-lg;
+
+    &.page-header-image {
+      height: 14rem;
+    }
   }
 }
 
@@ -62,6 +66,16 @@ $news-home-image-height: (
   }
 }
 
+@include media-breakpoint-down(xxl) {
+  .news {
+    .news-header-image {
+      &.page-header-image {
+        height: 12rem;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .news-feed {
     .news {
@@ -69,6 +83,14 @@ $news-home-image-height: (
 
       &:first-child {
         display: flex;
+      }
+    }
+  }
+
+  .news {
+    .news-header-image {
+      &.page-header-image {
+        height: 8rem;
       }
     }
   }
