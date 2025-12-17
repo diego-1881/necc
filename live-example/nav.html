@@ -1,0 +1,240 @@
+<div class="container-fluid px-0 px-lg-4 px-xl-5">
+  <a class="navbar-brand px-0 ms-3 ms-lg-0" href="./index.html">
+    <img
+      src="./img/the-new-england-center-for-children-necc-logo-white.svg"
+      alt="NECC Logo - White"
+      width="220"
+      height="64.35"
+      class="navbar-brand-logo-main"
+    />
+    <img
+      src="./img/the-new-england-center-for-children-necc-brandmark-white.svg"
+      alt="NECC Brand Mark - White"
+      width="40"
+      height="40"
+      class="navbar-brand-logo-on-scroll"
+    />
+  </a>
+
+  <button
+    class="navbar-toggler border-0"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#mainNavbar"
+    aria-controls="mainNavbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav navbar-dark ms-auto dropdown-hover-all">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" aria-expanded="false"
+          >Who We Are</a
+        >
+
+        <ul class="dropdown-menu py-1 py-lg-3 border-0">
+          <li><a class="nav-link dropdown-item text-white" href="our-story.html">Our Story</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="leadership.html">Our Leadership</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="dei.html">Diversity, Equity & Inclusion</a></li>
+          <li>
+            <a class="nav-link dropdown-item text-white" href="understanding-autism-and-aba.html">Understanding Autism & ABA</a>
+          </li>
+        </ul>
+      </li>
+      <!-- .nav-item -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" aria-expanded="false"
+          >What We Do</a
+        >
+
+        <ul class="dropdown-menu py-1 py-lg-3 border-0">
+          <li><a class="nav-link dropdown-item text-white" href="./our-school.html">NECC Southborough</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="./consulting-and-pss.html">Consulting & PSS</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="#">Global Consulting</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="#">ACE® ABA Software System</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="#">Research</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="#">Professional Development</a></li>
+        </ul>
+      </li>
+      <!-- .nav-item -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#" data-bs-toggle="dropdown" aria-expanded="false"
+          >NECC Southborough</a
+        >
+
+        <ul class="dropdown-menu py-1 py-lg-3 border-0">
+          <li>
+            <a class="nav-link dropdown-item text-white" href="./our-school.html">Our School</a>
+          </li>
+          <li class="dropend">
+            <a
+              class="nav-link dropdown-item dropdown-toggle text-white"
+              href="#"
+              id="dropdown-community"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Community</a
+            >
+            <div class="dropdown-menu border-0" aria-labelledby="dropdown-community">
+              <a class="nav-link dropdown-item text-white" href="./get-involved.html">Get Involved</a>
+            </div>
+          </li>
+          <li>
+            <a class="nav-link dropdown-item text-white" href="./news.html">News</a>
+          </li>
+        </ul>
+      </li>
+      <!-- .nav-item -->
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle d-flex justify-content-between align-items-center"
+          href="./consulting-and-pss.html"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          >Consulting & PSS</a
+        >
+
+        <ul class="dropdown-menu py-1 py-lg-3 border-0">
+          <li><a class="nav-link dropdown-item text-white" href="./consulting-and-pss.html#leadership">Leadership</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="./consulting-and-pss.html#contact">Contact Us</a></li>
+          <li><a class="nav-link dropdown-item text-white" href="./consulting-and-pss.html#services">Services</a></li>
+        </ul>
+      </li>
+      <!-- .nav-item -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="./careers.html">Careers</a>
+      </li>
+      <!-- .nav-item -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#">Donate</a>
+      </li>
+      <!-- .nav-item -->
+
+      <li class="nav-item align-content-center ms-lg-2">
+        <span class="search-container search-navbar">
+          <input type="search" class="form-control form-control-search bg-transparent" placeholder="Search" />
+          <i class="necc-icon necc-icon-search-slate search-icon"></i>
+          <i class="necc-icon necc-icon-sm necc-icon-close-slate search-close"></i>
+        </span>
+      </li>
+      <!-- .nav-item -->
+    </ul>
+  </div>
+</div>
+
+<script>
+  // Navbar
+  function handleScroll() {
+    const topNav = document.getElementById("topNav");
+
+    if (window.scrollY > 80) {
+      topNav.classList.add("navbar-scrolled");
+    } else {
+      topNav.classList.remove("navbar-scrolled");
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  function handleNavbarDropendClick(navbarDropendItems) {
+    navbarDropendItems.forEach((dropend) => {
+      dropend.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+      });
+    });
+  }
+
+  // Close navbar on click outside
+  function closeNavbarOnClickOutside() {
+    const navbarCollapse = document.getElementById("mainNavbar");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+
+    document.addEventListener("click", function (event) {
+      const isNavbarOpen = navbarCollapse.classList.contains("show");
+      if (!isNavbarOpen) return;
+
+      if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+        const bsCollapse = Collapse.getOrCreateInstance(navbarCollapse);
+        bsCollapse.hide();
+      }
+    });
+  }
+
+  // Search component
+  function handleSearchIconClick(searchIcons) {
+    searchIcons.forEach((searchIcon) => {
+      const searchContainer = searchIcon.closest(".search-container");
+      const searchInput = searchContainer.querySelector(".form-control-search");
+      const navbar = searchIcon.closest(".navbar");
+      const navbarCollapse = navbar?.querySelector(".navbar-collapse");
+      const navbarBrand = navbar?.querySelector(".navbar-brand");
+
+      searchIcon.addEventListener("click", function () {
+        if (navbar && navbarCollapse && navbarBrand) {
+          navbarCollapse.classList.add("hidden");
+          navbarBrand.classList.add("hidden");
+        }
+
+        handleSearchExpand(searchContainer, searchInput);
+      });
+    });
+  }
+
+  function handleSearchCloseClick(searchClose) {
+    searchClose.forEach((closeButton) => {
+      const searchContainer = closeButton.closest(".search-container");
+      const searchInput = searchContainer.querySelector(".form-control-search");
+      const navbar = closeButton.closest(".navbar");
+      const navbarCollapse = navbar?.querySelector(".navbar-collapse");
+      const navbarBrand = navbar?.querySelector(".navbar-brand");
+
+      closeButton.addEventListener("click", function () {
+        if (navbar && navbarCollapse && navbarBrand) {
+          navbarCollapse.classList.remove("hidden");
+          navbarBrand.classList.remove("hidden");
+        }
+
+        handleSearchContract(searchContainer, searchInput, mainNavbar);
+      });
+    });
+  }
+
+  function handleSearchExpand(searchContainer, searchInput) {
+    searchContainer.classList.add("search-container-expanded");
+    searchInput.classList.add("form-control-search-expanded");
+    searchInput.focus();
+  }
+
+  function handleSearchContract(searchContainer, searchInput) {
+    searchContainer.classList.remove("search-container-expanded");
+    searchInput.classList.remove("form-control-search-expanded");
+  }
+
+  // Initialize the functions
+  function init() {
+    document.addEventListener("DOMContentLoaded", async () => {
+      const searchIcons = document.querySelectorAll(".search-icon");
+      const searchClose = document.querySelectorAll(".search-close");
+      const navbarDropendItems = document.querySelectorAll("#mainNavbar .dropend > .dropdown-toggle");
+
+      handleSearchIconClick(searchIcons);
+      handleSearchCloseClick(searchClose);
+      if (isMobile()) {
+        reorderTeamCards();
+      }
+      handleNavbarDropendClick(navbarDropendItems);
+    });
+  }
+  init();
+</script>
