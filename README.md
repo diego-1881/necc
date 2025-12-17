@@ -14,11 +14,11 @@ This project contains the hand-crafted HTML, CSS, and JavaScript used to integra
 
 ## Technology Stack
 
-- **Vite**
-- **Bootstrap 5**
-- **Custom SCSS**
-- **Vanilla JavaScript**
-- **Swiper**
+- Vite
+- Bootstrap 5
+- Custom SCSS
+- Vanilla JavaScript
+- Swiper
 
 ## Getting Started
 
@@ -33,7 +33,3 @@ Installs all project dependencies required for development and building.
 Starts the Vite development server.
 
 Open http://localhost:8090 to view it in your browser.
-
-### `npm run build`
-
-Builds the site for production to the `build` folder.
